@@ -1,6 +1,6 @@
  <!-- Footer -->
  <footer class="bg-dark text-light text-center fixed-bottom">
-     <p class="m-0 p-1">&copy; Dinas Perhubungan Kabupaten Kotawaringin Barat.</p>
+     <p class="m-0 p-1">&copy; Dinas Penataan Ruang Pati.</p>
  </footer>
 
  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
