@@ -1,4 +1,4 @@
 {
-    "php.validate.executablePath": "c:/php/php.exe",
-    "accessibility.signalOptions.volume": 0
+	"php.validate.executablePath": "c:/php/php.exe",
+	"accessibility.signalOptions.volume": 0
 }
