@@ -1,7 +1,7 @@
 <section id="section-1" class="hero-section bg-body-tertiary" style="background-image: url('<?= base_url('assets/img/bg.jpeg') ?>'); background-size: cover;">
-    <div class="pindang position-absolute bottom-0" style="z-index: 5;">
+    <!-- <div class="pindang position-absolute bottom-0" style="z-index: 5;">
         <img width="300" src="<?= base_url('assets/img/pindang.png') ?>" alt="">
-    </div>
+    </div> -->
     <div class="container-fluid glass-bg d-flex" style="min-height: 100vh; margin-top:-100px;">
         <div class="container m-auto mb-2">
             <div class="row align-items-center m-auto">
