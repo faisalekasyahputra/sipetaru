@@ -25,16 +25,63 @@
 
 
 
-            <div class="row justify-content-center g-3 p-3 position-absolute top-100">
-                <div class="col-md-4">
-                    <div class="card mb-3 glass rounded-4 position-relative" data-aos="fade-up" data-aos-offset="0" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
-                        <dotlottie-player class="m-auto position-absolute top-50 start-0 translate-middle" src="https://lottie.host/c82f6567-634f-49a3-a65c-aa3a46c34707/6dy5iQdqxG.json" background="transparent" speed="0.5" style="width: 200px;" loop autoplay></dotlottie-player>
-                        <div class="card-body ps-5">
-                            <!-- <dotlottie-player class="m-auto position-absolute top-0" src="https://lottie.host/89e46c0c-2182-4577-a5d5-16ddfe3c7673/jFrw6mz6G2.json" background="transparent" speed="0.5" style="width: 200px;" loop autoplay></dotlottie-player> -->
-                            <div class="card-body ps-5">
-                                <h5 class="card-title fw-bold text-center">Peta Dasar</h5>
-                                <small class="card-text text-muted">Peta yang menyajikan unsur-unsur alam dan atau buatan manusia, yang berada di permukaan bumi, digambarkan pada suatu bidang datar dengan skala, penomoran, proyeksi, dan georeferensi tertentu</sma>
+            <div class="row justify-content-center g-3 p-3 position-absolute bottom-0 ">
+                <div class="col-md-4 ">
+                    <div class="card mb-3 glass rounded-4 position-relative " data-aos="fade-up" data-aos-offset="0" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
+
+                        <div class="card-body d-flex flex-row">
+                            <div class="col glass me-2 rounded-2"><dotlottie-player class="m-auto" src="https://lottie.host/332b8793-f0eb-4f17-936e-296d7e5db66c/8neWlkCbMY.json" background="transparent" speed="3" style="width: 150px;" loop autoplay></dotlottie-player></div>
+                            <div class="col ">
+                                <div class="col">
+                                    <h4 class="card-title fw-bolder text-start">Peta Dasar</h4>
+                                </div>
+                                <div class="col overflow-y-scroll" style="max-height:100px;"><small style="font-size: 10px; " class="card-text text-muted text-break ">Peta yang menyajikan unsur-unsur alam dan atau buatan manusia, yang berada di permukaan bumi, digambarkan pada suatu bidang datar dengan skala, penomoran, proyeksi, dan georeferensi tertentu</small></div>
+
+
                             </div>
+
+                            <!-- <dotlottie-player class="m-auto position-absolute top-0" src="https://lottie.host/89e46c0c-2182-4577-a5d5-16ddfe3c7673/jFrw6mz6G2.json" background="transparent" speed="0.5" style="width: 200px;" loop autoplay></dotlottie-player> -->
+
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-md-4 ">
+                    <div class="card mb-3 glass rounded-4 position-relative " data-aos="fade-up" data-aos-offset="0" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
+
+                        <div class="card-body d-flex flex-row">
+                            <div class="col glass me-2 rounded-2"><dotlottie-player class="m-auto" src="https://lottie.host/332b8793-f0eb-4f17-936e-296d7e5db66c/8neWlkCbMY.json" background="transparent" speed="3" style="width: 150px;" loop autoplay></dotlottie-player></div>
+                            <div class="col">
+                                <h4 class="card-title fw-bolder text-start">Peta Tematik</h4>
+                                <small style="font-size: 10px; " class="card-text text-muted text-break">Peta yang menggambarkan tema tertentu yang digunakan untuk pembuatan peta rencana tata ruang.</small>
+                            </div>
+
+                            <!-- <dotlottie-player class="m-auto position-absolute top-0" src="https://lottie.host/89e46c0c-2182-4577-a5d5-16ddfe3c7673/jFrw6mz6G2.json" background="transparent" speed="0.5" style="width: 200px;" loop autoplay></dotlottie-player> -->
+
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-md-4 ">
+                    <div class="card mb-3 glass rounded-4 position-relative " data-aos="fade-up" data-aos-offset="0" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
+
+                        <div class="card-body d-flex flex-row">
+                            <div class="col glass me-2 rounded-2"><dotlottie-player class="m-auto" src="https://lottie.host/332b8793-f0eb-4f17-936e-296d7e5db66c/8neWlkCbMY.json" background="transparent" speed="3" style="width: 150px;" loop autoplay></dotlottie-player></div>
+                            <div class="col">
+                                <h4 class="card-title fw-bolder text-start">Peta Rencana</h4>
+                                <small style="font-size: 10px; " class="card-text text-muted text-break">Menyajikan peta rencana struktur ruang dan pola ruang dari hasil Perencanaan Tata Ruang.</small>
+                            </div>
+
+                            <!-- <dotlottie-player class="m-auto position-absolute top-0" src="https://lottie.host/89e46c0c-2182-4577-a5d5-16ddfe3c7673/jFrw6mz6G2.json" background="transparent" speed="0.5" style="width: 200px;" loop autoplay></dotlottie-player> -->
+
+
+
                         </div>
                     </div>
 
