@@ -6,10 +6,10 @@
         <div class="container m-auto mb-2">
             <div class="row align-items-center m-auto">
                 <div class="col d-flex" data-aos="fade-up" data-aos-offset="0" data-aos-delay="150" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
-                    <dotlottie-player src="https://lottie.host/f7c9767f-2a74-485a-8bb6-d1256bf26c3c/8NDZiVKqJ6.json" background="transparent" speed="0.5" style="width: 60px;" loop autoplay></dotlottie-player>
+                    <dotlottie-player src="https://lottie.host/aa8aabbf-895c-41df-b8ee-13f720dfcdf2/actgKuY5Fe.json" background="transparent" speed="2" style="width: 60px;" loop autoplay></dotlottie-player>
 
                     <div class="col py-3">
-                        <p class="h2 m-0 fw-bolder judul text-white text-capitalize">Sistem informasi penataan ruang kabupaten pati</p>
+                        <p class="h2 m-0 text-capitalize dela-gothic-one-regular">Sistem informasi penataan ruang kabupaten pati</p>
                         <p class="h2 fw-bold subjudul m-0">Dinas DPUPR</p>
                         <p class="lead fs-medium "> Kabupaten Pati</p>
                     </div>
@@ -42,9 +42,9 @@
 </section>
 
 <!-- Section 2 -->
-<section id="section-2" class="position-relative">
-    <div class="container-fluid py-5 bg-dark">
-        <div class="container mb-5">
+<section id="section-2">
+    <div class="container-fluid py-5 bg-dark position-relative">
+        <div class="container mb-5 position-relative" style="z-index: 2;">
             <div class="row text-center">
                 <div class="col">
                     <p class="display-6 sub-judul mb-5" style="color: white;">Selamat Datang di Si Petarung Pati</p>
@@ -104,9 +104,11 @@
 
                 </div>
             </div>
+
+
         </div>
+        <dotlottie-player class="position-absolute bottom-0 opacity-50" src="https://lottie.host/262b4002-942e-48c7-a4c4-9a4a05ed113a/k87BJysSiy.json" background="transparent" speed="1" style="width: 100%; z-index:0;" loop autoplay></dotlottie-player>
     </div>
-    <iframe class="position-absolute" src="https://lottie.host/embed/262b4002-942e-48c7-a4c4-9a4a05ed113a/k87BJysSiy.json"></iframe>
 
 </section>
 
