@@ -467,7 +467,7 @@
     });
 
     var map = L.map('map', {
-        center: [-6.7521643, 111.0816679],
+        center: [-6.753482, 111.0374407],
         zoom: 13,
         maxZoom: 25,
         minZoom: 12,
@@ -493,4 +493,134 @@
     L.control.zoom({
         position: 'bottomright'
     }).addTo(map);
+
+    var attr = L.control({
+
+        position: 'topleft'
+
+    });
+
+    attr.onAdd = function(map) {
+
+        this._div = L.DomUtil.create('div', 'attr');
+
+        header = L.DomUtil.create('div', 'attrhead');
+
+        this._div.append(header, '');
+
+        box = L.DomUtil.create('div', 'box_basemap');
+
+        this._div.append(box);
+
+        this.update('<h6><b>Informasi Peta</b></h6>', '<center>"Arahkan cursor mouse anda atau dengan mengklik layer peta untuk melihat informasi peta"</center>');
+
+        return this._div;
+
+    }
+
+    attr.update = function(props, attribut) {
+
+        var contents = props;
+
+        header.innerHTML = `<h6>${contents}</h6>`;
+
+        box.innerHTML = attribut;
+
+    };
+
+    attr.addTo(map);
+
+    var base = [{
+
+        "id": 'peta1',
+
+        "nama_peta": "Opensteet Map",
+
+        "tid": 0,
+
+        "layer": peta1
+
+
+
+    }, {
+
+        "id": 'peta2',
+
+        "nama_peta": "Google Road Map",
+
+        "tid": 1,
+
+        "layer": peta2
+
+    }, {
+
+        "id": "peta3",
+
+        "nama_peta": "Google Hybrid",
+
+        "tid": 2,
+
+        "layer": peta3
+
+    }, {
+
+        "id": "peta4",
+
+        "nama_peta": "Google Satelit",
+
+        "tid": 3,
+
+        "layer": peta4
+
+    }];
+
+    var info = L.control({
+        position: 'topright'
+    });
+
+    info.onAdd = function(map) {
+
+        this._div = L.DomUtil.create('div', 'info');
+
+        this._div.id = "tubuh";
+
+        head = L.DomUtil.create('div', 'atas');
+
+        this._dalamatas = L.DomUtil.create('div', 'center');
+
+        this._dalamatas.innerHTML = '<h6><b>Base Maps</b></h6>';
+
+        return this._div;
+        this._arrow = L.DomUtil.create('div', 'drop');
+
+        this._arrow.id = 'dr_atas';
+
+        this._arrow.innerHTML = '<a href="#" onclick="hid_bese()" ><img src="<?= base_url('assets/img/arrow_up.png') ?>"></a>';
+
+
+
+        head.append(this._dalamatas);
+
+        head.append(this._arrow);
+
+        this._div.append(head);
+        frame_base_map = L.DomUtil.create('div', 'box_basemap');
+
+        frame_base_map.id = "from_base";
+
+        frame_base_map.innerHTML = base_label;
+
+        this._div.append(frame_base_map);
+        rame_base_map = L.DomUtil.create('div', 'box_basemap');
+
+        frame_base_map.id = "from_base";
+
+        frame_base_map.innerHTML = base_label;
+
+        this._div.append(frame_base_map);
+
+    }
+
+
+    info.addTo(map);
 </script>
