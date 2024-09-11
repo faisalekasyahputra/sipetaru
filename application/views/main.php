@@ -3,45 +3,46 @@
         <img width="300" src="<?= base_url('assets/img/pindang.png') ?>" alt="">
     </div> -->
     <div class="container-fluid glass-bg d-flex" style="min-height: 100vh; margin-top:-100px;">
-        <div class="container m-auto mb-2">
-            <div class="row d-flex align-items-start m-auto">
+        <div class="container-fluid  pt-5 position-relative" style=" margin-top:50px;">
+            <div class="row d-flex align-items-middle m-auto pt-5 ">
                 <div class="col d-flex" data-aos="fade-up" data-aos-offset="0" data-aos-delay="150" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
-                    <div class="col-2 ">
+                    <div class="col-3 ">
 
-                        <dotlottie-player src="https://lottie.host/aa8aabbf-895c-41df-b8ee-13f720dfcdf2/actgKuY5Fe.json" background="transparent" speed="2" style="width: 100px;" loop autoplay></dotlottie-player>
+                        <dotlottie-player src="https://lottie.host/aa8aabbf-895c-41df-b8ee-13f720dfcdf2/actgKuY5Fe.json" background="transparent" speed="2" style="width: 150px;" loop autoplay></dotlottie-player>
                     </div>
 
                     <div class="col py-3">
                         <p class="lead fs-small badge text-bg-primary mb-0">SIPETARUNG KABUPATEN PATI</p>
                         <p class="display-5 text-white text-capitalize dela-gothic-one-regular">Sistem informasi <br>penataan ruang kabupaten pati</p>
                         <p class="h2 fw-bold subjudul text-primary">Dinas DPUPR</p>
-                        <p class="lead fs-medium "> Kabupaten Pati</p>
+                        <small class="lead fs-medium "> Kabupaten Pati</small>
                     </div>
                 </div>
-                <div class="col d-flex justify-content-end " data-aos="fade-up" data-aos-offset="0" data-aos-delay="150" data-aos-duration="900" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
-                    <img class="img-thumbnail border border-0 vibrate-1 w-75 bg-transparent" src="<?= base_url('assets/img/land.png') ?>" alt="">
+                <div class="col d-flex justify-content-center " data-aos="fade-up" data-aos-offset="0" data-aos-delay="150" data-aos-duration="900" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
+                    <img class="img-thumbnail border border-0 vibrate-1 w-75 bg-transparent " src="<?= base_url('assets/img/land.png') ?>" alt="">
                 </div>
             </div>
 
 
 
-            <div class="row justify-content-center g-3 p-3">
+            <div class="row justify-content-center g-3 p-3 position-absolute top-100">
                 <div class="col-md-4">
-                    <div class="card mb-3" data-aos="fade-up" data-aos-offset="0" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    <div class="card mb-3 glass rounded-4 position-relative" data-aos="fade-up" data-aos-offset="0" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
+                        <dotlottie-player class="m-auto position-absolute top-50 start-0 translate-middle" src="https://lottie.host/c82f6567-634f-49a3-a65c-aa3a46c34707/6dy5iQdqxG.json" background="transparent" speed="0.5" style="width: 200px;" loop autoplay></dotlottie-player>
+                        <div class="card-body ps-5">
+                            <!-- <dotlottie-player class="m-auto position-absolute top-0" src="https://lottie.host/89e46c0c-2182-4577-a5d5-16ddfe3c7673/jFrw6mz6G2.json" background="transparent" speed="0.5" style="width: 200px;" loop autoplay></dotlottie-player> -->
+                            <div class="card-body ps-5">
+                                <h5 class="card-title fw-bold text-center">Peta Dasar</h5>
+                                <small class="card-text text-muted">Peta yang menyajikan unsur-unsur alam dan atau buatan manusia, yang berada di permukaan bumi, digambarkan pada suatu bidang datar dengan skala, penomoran, proyeksi, dan georeferensi tertentu</sma>
+                            </div>
                         </div>
                     </div>
+
+
                 </div>
-
-
             </div>
-        </div>
 
-    </div>
+        </div>
 
 </section>
 
