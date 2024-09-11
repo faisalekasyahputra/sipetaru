@@ -46,20 +46,21 @@
                     </a>
                     <ul class="dropdown-menu mt-4 p-2" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/bgn_nonpem') ?>">Peta Dasar</a>
+                            <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/peta') ?>">Peta Dasar</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/fung_nonpem') ?>">Peta Tematik </a>
+                            <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/peta') ?>">Peta Tematik </a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/fung_nonpem') ?>">Peta Rencana </a>
+                            <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/peta') ?>">Peta Rencana </a>
                         </li>
 
                     </ul>
                 </li>
+                <!--                 
                 <li class="nav-item px-2">
                     <a class="nav-link" href="<?= base_url('index.php/Welcome/peta') ?>">Peta PJU</a>
-                </li>
+                </li> -->
 
 
 

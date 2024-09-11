@@ -21,28 +21,18 @@
 
 
 
-            <div class="row g-3 p-3">
+            <div class="row justify-content-center g-3 p-3">
                 <div class="col-md-4">
-                    <div class="card " data-aos="fade-up" data-aos-offset="0" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
-
-                        <img class="rounded-2 " src="<?= base_url('assets/img/jalan.jpg') ?>" alt="" style="height: inherit; object-fit:cover">
-
+                    <div class="card mb-3" data-aos="fade-up" data-aos-offset="0" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card " data-aos="fade-up" data-aos-offset="0" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
 
-                        <img class="rounded-2 " src="<?= base_url('assets/img/jalan.jpg') ?>" alt="" style="height: inherit; object-fit:cover">
-
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card" data-aos="fade-up" data-aos-offset="0" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
-
-                        <img class="rounded-2 " src="<?= base_url('assets/img/jalan.jpg') ?>" alt="" style="height: inherit; object-fit:cover">
-
-                    </div>
-                </div>
 
             </div>
         </div>
@@ -70,13 +60,14 @@
                 </div>
                 <div class="col">
                     <div class="row">
-                        <div class="col">
+                        <div class="row">
                             <p class="text-white">Selamat Datang di Si Petarung Pati (Sistem Informasi Penataan Ruang Kabupaten Pati) yang dikembangkan oleh Dinas Pekerjaan Umum dan Penataan Ruang Kabupaten Pati yang memuat data/informasi perencanaan dan pemanfaatan ruang di Kabupaten Pati.
                             </p>
                             <p class="text-white">Si Petarung Pati merupakan media sosialisasi informasi penataan ruang kepada masyarakat luas dengan penyebarluasan informasi tentang rencana pemanfaatan ruang di Kabupaten Pati agar mudah diakses oleh masyarakat, pelaku usaha dan investor yang membutuhkan dan akan memanfaatkan ruang</p>
                         </div>
-                        <div class="col">
-                            Statistika Pengunjung
+                        <div class="row">
+                            <p class="text-white">Statistik Pengunjung</p>
+                            <a href="https://info.flagcounter.com/tekZ"><img src="https://s11.flagcounter.com/count2/tekZ/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
                         </div>
                     </div>
 
@@ -116,6 +107,7 @@
         </div>
     </div>
 </section>
+
 <!-- <section id="section-3">
     <div class="container-fluid bg-dark h-100">
         <div class="container h-100 pb-5">
