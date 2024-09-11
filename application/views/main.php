@@ -107,7 +107,7 @@
 
                 <div class="col-4">
 
-                    <iframe class="rounded p-0 m-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1020377.2625667297!2d111.01823372017685!3d-2.556068929135152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e088d657f31bfc7%3A0x98c967d3b2f9a201!2sKabupaten%20Kotawaringin%20Barat%2C%20Kalimantan%20Tengah!5e0!3m2!1sid!2sid!4v1699783414694!5m2!1sid!2sid" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe class=" rounded p-0 m-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.151083003892!2d111.02899680921614!3d-6.751421993216891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70d24e652a6c0f%3A0x7a9f94931b3f4475!2sDinas%20Pekerjaan%20Umum%20dan%20Penataan%20Ruang%20Kabupaten%20Pati!5e0!3m2!1sid!2sid!4v1726051656756!5m2!1sid!2sid" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                 </div>
                 <div class="col">
