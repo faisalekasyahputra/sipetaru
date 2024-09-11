@@ -52,16 +52,16 @@
 
         overflow-y: scroll;
 
-        scrollbar-color: transparent;
+        scrollbar-color: rebeccapurple green;
 
         font-family: 'Poppins', sans-serif;
 
-        background: rgba(255, 255, 255, 0.28);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        -webkit-backdrop-filter: blur(9.2px);
-        backdrop-filter: blur(9.2px);
+        background: white;
+        background: rgba(255, 255, 255, 0.8);
 
-        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
+        border-radius: 5px;
 
         display: block;
 
@@ -107,27 +107,23 @@
 
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        margin: 0;
-    }
-
     .atas {
-        position: relative;
-        width: 100%;
 
-        margin-bottom: 5px;
-        padding: 5px;
+        width: 284px;
+
+        height: 30px;
+
+        padding: 6px 8px;
 
         font-family: 'Poppins', sans-serif;
 
-        background: #0d6efd;
+        background: rgba(0, 145, 168, 0.8);
 
-        border-radius: 5px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
+        vertical-align: text-top;
+
+        border-radius: 2px;
     }
 
     .ataspencarian {
@@ -168,23 +164,19 @@
 
     .center {
 
+        margin: 0;
 
-        display: flex;
+        position: absolute;
 
+        justify-content: center;
 
         align-items: center;
 
     }
 
     .drop {
-
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        margin-right: 10px;
-        margin-top: 5px;
-
+        padding-top: 10px;
+        margin-left: 250px
     }
 
 
@@ -680,7 +672,6 @@
                 "id": 'admin14',
                 "nama_peta": "Pola Ruang",
                 "tid": 14,
-
             };
         <?php } ?>
 
