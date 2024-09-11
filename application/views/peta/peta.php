@@ -69,6 +69,8 @@
     }
 
     .attr {
+        padding: 10px;
+        translate: 0 60%;
 
         width: 250px;
 
@@ -78,7 +80,7 @@
 
         max-height: 750px;
 
-        min-height: 170px;
+        min-height: auto;
 
         z-index: 100;
 
@@ -89,13 +91,18 @@
 
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 
-        border-radius: 5px;
+        border-radius: 10px;
 
         display: block;
 
-        position: relative;
+        position: absolute;
 
         z-index: 2;
+        background: rgba(255, 255, 255, 0.28);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        -webkit-backdrop-filter: blur(9.2px);
+        backdrop-filter: blur(9.2px);
+
     }
 
     .atas {
@@ -193,7 +200,7 @@
 
 
     .attrhead {
-        width: 250px;
+        width: 100%;
 
 
 
@@ -205,10 +212,6 @@
 
         text-align: center;
 
-        background: rgba(0, 145, 168, 0.8);
-
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-
 
 
 
@@ -217,9 +220,7 @@
 
     .label_kec {
         width: auto;
-        height:
-
-            auto;
+        height: auto;
         font-size: 12px;
 
         border-color: none;
@@ -512,7 +513,7 @@
 
         this._div.append(box);
 
-        this.update('<h6><b>Informasi Peta</b></h6>', '<center>"Arahkan cursor mouse anda atau dengan mengklik layer peta untuk melihat informasi peta"</center>');
+        this.update('<h6><b>Informasi Peta</b></h6>', '<center><p>"Arahkan cursor mouse anda atau dengan mengklik layer peta untuk melihat informasi peta"</p></center>');
 
         return this._div;
 
