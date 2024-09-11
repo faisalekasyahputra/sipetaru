@@ -15,7 +15,7 @@
     html,
     body,
     #map {
-      height: 100vh;
+      height: 98vh;
       width: 100%;
     }
   </style>
@@ -23,10 +23,7 @@
 
 
 <body class="overflow-x-hidden position-relative">
-  <div class="col align-items-center halaman position-absolute ms-5 mt-4 d-flex glass p-3 rounded" style="z-index: 3;">
-    <dotlottie-player class="me-2 ms-0" src="https://lottie.host/aa8aabbf-895c-41df-b8ee-13f720dfcdf2/actgKuY5Fe.json" background="transparent" speed="2" style="width: 40px;" loop autoplay></dotlottie-player>
-    <p class="h4 m-0 me-3 text-white text-capitalize dela-gothic-one-regular">Peta Dasar</p>
-  </div>
+
   <nav class="navbar navbar-expand-lg shadow-sm glass position-absolute start-50 border rounded m-2 mt-5 " data-aos="fade-down" data-aos-offset="200" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center" style="z-index: 999; 
   transform: translate(-50%, -50%);">
     <div class="container border">
@@ -98,6 +95,10 @@
       </div>
     </div>
   </nav>
+  <div class="col align-items-center halaman position-absolute m-3 d-flex glass p-3 rounded start-100" style="z-index: 3;">
+    <dotlottie-player class="me-2 ms-0" src="https://lottie.host/aa8aabbf-895c-41df-b8ee-13f720dfcdf2/actgKuY5Fe.json" background="transparent" speed="2" style="width: 30px;" loop autoplay></dotlottie-player>
+    <p class="h5 m-0 me-3 text-white text-capitalize dela-gothic-one-regular">Peta Dasar</p>
+  </div>
   <?= $content ?>
   <?php include "layouts/foot.php" ?>
 
