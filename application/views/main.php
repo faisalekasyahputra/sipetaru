@@ -4,13 +4,17 @@
     </div> -->
     <div class="container-fluid glass-bg d-flex" style="min-height: 100vh; margin-top:-100px;">
         <div class="container m-auto mb-2">
-            <div class="row align-items-center m-auto">
+            <div class="row d-flex align-items-start m-auto">
                 <div class="col d-flex" data-aos="fade-up" data-aos-offset="0" data-aos-delay="150" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
-                    <dotlottie-player src="https://lottie.host/aa8aabbf-895c-41df-b8ee-13f720dfcdf2/actgKuY5Fe.json" background="transparent" speed="2" style="width: 60px;" loop autoplay></dotlottie-player>
+                    <div class="col-2 ">
+
+                        <dotlottie-player src="https://lottie.host/aa8aabbf-895c-41df-b8ee-13f720dfcdf2/actgKuY5Fe.json" background="transparent" speed="2" style="width: 100px;" loop autoplay></dotlottie-player>
+                    </div>
 
                     <div class="col py-3">
-                        <p class="h2 m-0 text-capitalize dela-gothic-one-regular">Sistem informasi penataan ruang kabupaten pati</p>
-                        <p class="h2 fw-bold subjudul m-0">Dinas DPUPR</p>
+                        <p class="lead fs-small badge text-bg-primary mb-0">SIPETARUNG KABUPATEN PATI</p>
+                        <p class="display-5 text-white text-capitalize dela-gothic-one-regular">Sistem informasi <br>penataan ruang kabupaten pati</p>
+                        <p class="h2 fw-bold subjudul text-primary">Dinas DPUPR</p>
                         <p class="lead fs-medium "> Kabupaten Pati</p>
                     </div>
                 </div>
