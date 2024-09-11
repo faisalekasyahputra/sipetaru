@@ -123,8 +123,6 @@ html {
 
 .btn-primary {
 	border: none;
-	border-top: 3px solid var(--w-secondary);
-	background-color: var(--w-primary);
 }
 
 ::-webkit-scrollbar {
