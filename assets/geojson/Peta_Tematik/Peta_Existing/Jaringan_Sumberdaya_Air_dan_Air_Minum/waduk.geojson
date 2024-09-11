@@ -1,0 +1,4 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":{"type":"Point","coordinates":[110.9589672792877,-6.697378856751257,0]},"properties":{"KET":"Waduk","KETERANGAN":"Waduk Gembong","X":495465.03654,"Y":9259704.45128,"Sumber":"Toponim Deliniasi Batas Wilayah Administrasi Desa Secara Kartometrik BIG 2017"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[110.96779964638195,-6.654985881153237,0]},"properties":{"KET":"Waduk","KETERANGAN":"Waduk Gunungrowo","X":496440.889521,"Y":9264390.85833,"Sumber":"Toponim Deliniasi Batas Wilayah Administrasi Desa Secara Kartometrik BIG 2017"}}
+]}

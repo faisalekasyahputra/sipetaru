@@ -1,0 +1,7 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":{"type":"Point","coordinates":[110.93213901675419,-6.89372416539995]},"properties":{"KET":"Rumah Panggung","Sumber":"Survey Lapangan oleh DPUTR Kab. Pati, Tahun 2019"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[111.0548490912538,-6.774580665030654]},"properties":{"KET":"Rumah Panggung","Sumber":"Survey Lapangan oleh DPUTR Kab. Pati, Tahun 2019"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[111.09305076036979,-6.74664067010233]},"properties":{"KET":"Rumah Panggung","Sumber":"Survey Lapangan oleh DPUTR Kab. Pati, Tahun 2019"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[111.05325106732454,-6.771617748511711]},"properties":{"KET":"Rumah Panggung","Sumber":"Survey Lapangan oleh DPUTR Kab. Pati, Tahun 2019"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[111.14256351493337,-6.733715544234513]},"properties":{"KET":"Rumah Panggung","Sumber":"Survey Lapangan oleh DPUTR Kab. Pati, Tahun 2019"}}
+]}

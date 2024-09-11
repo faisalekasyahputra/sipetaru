@@ -1,0 +1,4 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":{"type":"Point","coordinates":[111.0526324929467,-6.767001061624192]},"properties":{"Eksisting":"Gardu Induk Listrik","Sumber":"Survey Lapangan, 2018"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[111.067058494644,-6.618794099047688]},"properties":{"Eksisting":"Gardu Induk Listrik","Sumber":"Survey Lapangan, 2018"}}
+]}

@@ -1,0 +1,12 @@
+{
+"type": "FeatureCollection",
+"name": "Transportasi PT",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "terminal": "Tayu", "KETERANGAN": "Sub Terminal", "SUMBER": "Interpretasi Citra Satelit Resolusi Tinggi oleh DPUTR Kab. Pati, Tahun 2018", "X": 503879.99972099997, "Y": 9277748.539000001 }, "geometry": { "type": "Point", "coordinates": [ 111.035095034563497, -6.53415058440715 ] } },
+{ "type": "Feature", "properties": { "terminal": "Kayen", "KETERANGAN": "Sub Terminal", "SUMBER": "Interpretasi Citra Satelit Resolusi Tinggi oleh DPUTR Kab. Pati, Tahun 2018", "X": 498408.99437799997, "Y": 9238173.0957299992 }, "geometry": { "type": "Point", "coordinates": [ 110.985598656252037, -6.892153897991391 ] } },
+{ "type": "Feature", "properties": { "terminal": null, "KETERANGAN": "Terminal Tipe C", "SUMBER": "Interpretasi Citra Satelit Resolusi Tinggi oleh DPUTR Kab. Pati, Tahun 2018", "X": 505232.45797300001, "Y": 9253081.5695999991 }, "geometry": { "type": "Point", "coordinates": [ 111.047349508009475, -6.757289300077002 ] } },
+{ "type": "Feature", "properties": { "terminal": "Juwana", "KETERANGAN": "Sub Terminal", "SUMBER": "Interpretasi Citra Satelit Resolusi Tinggi oleh DPUTR Kab. Pati, Tahun 2018", "X": 516005.37121800001, "Y": 9258169.8407899998 }, "geometry": { "type": "Point", "coordinates": [ 111.144821861999972, -6.711241388000014 ] } },
+{ "type": "Feature", "properties": { "terminal": "Pelabuhan Juwana", "KETERANGAN": "Pelabuhan Pengumpul", "SUMBER": "Interpretasi Citra Satelit Resolusi Tinggi oleh DPUTR Kab. Pati, Tahun 2018", "X": 517111.99968000001, "Y": 9259109.4075499997 }, "geometry": { "type": "Point", "coordinates": [ 111.154832292999984, -6.702738969 ] } }
+]
+}
