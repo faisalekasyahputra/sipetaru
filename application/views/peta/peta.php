@@ -446,6 +446,7 @@
     }
 </style>
 <script>
+    var key = 'pk.87f2d9fcb4fdd8da1d647b46a997c727';
     peta1 = new L.TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
 
     peta2 = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
@@ -474,4 +475,22 @@
         zoomControl: false,
     });
     map.addLayer(peta3);
+
+    map.on('dialog:opened', function(e) {
+        console.log("dialog opened event fired.");
+    });
+
+
+
+    map.on('dialog:closehidden', function(e) {
+        console.log("dialog closehidden event fired.");
+    });
+
+    map.on('dialog:closeshown', function(e) {
+        console.log("dialog closeshown event fired.");
+    });
+    L.control.scale().addTo(map);
+    L.control.zoom({
+        position: 'bottomright'
+    }).addTo(map);
 </script>
