@@ -15,28 +15,52 @@
 
                 <li class=" nav-item px-2">
                     <a class="btn nav-link d-flex align-items-center" aria-current="page" href="<?= base_url('index.php/Welcome/data_pju') ?>" type="button">
-                        <p class="m-0">Data PJU</p></i>
+                        <p class="m-0">Profil</p></i>
                     </a>
                 </li>
+                <li class=" dropdown d-flex px-2">
+                    <a class="btn nav-link d-flex align-items-center " href="#" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <p class="m-0">Profil</p> <i class="fa fa-sort-down ms-2 mb-2" aria-hidden="true"></i>
+                    </a>
+                    <ul class="dropdown-menu mt-4 p-1" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/bgn_nonpem') ?>">Visi & Misi</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/fung_nonpem') ?>">Tugas Pokok dan Fungsi </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/fung_nonpem') ?>">Struktur Organisasi </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/fung_nonpem') ?>">Sumber Daya Manusia </a>
+                        </li>
 
-                <li class="nav-item px-2">
-                    <a class="nav-link" href="<?= base_url('index.php/Welcome/peta') ?>">Peta PJU</a>
+
+                    </ul>
                 </li>
 
                 <li class=" dropdown d-flex px-2">
                     <a class="btn nav-link d-flex align-items-center " href="#" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <p class="m-0">Laporan</p> <i class="fa fa-sort-down ms-2 mb-2" aria-hidden="true"></i>
+                        <p class="m-0">Peta</p> <i class="fa fa-sort-down ms-2 mb-2" aria-hidden="true"></i>
                     </a>
                     <ul class="dropdown-menu mt-4 p-2" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/bgn_nonpem') ?>">Laporan Survey</a>
+                            <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/bgn_nonpem') ?>">Peta Dasar</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/fung_nonpem') ?>">Laporan Akhir </a>
+                            <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/fung_nonpem') ?>">Peta Tematik </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/fung_nonpem') ?>">Peta Rencana </a>
                         </li>
 
                     </ul>
                 </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link" href="<?= base_url('index.php/Welcome/peta') ?>">Peta PJU</a>
+                </li>
+
 
 
                 <a class="btn nav-link d-flex align-items-center " href="<?= base_url('index.php/Welcome/statistik') ?>" type="button" <p class="m-0">Statistik</p>

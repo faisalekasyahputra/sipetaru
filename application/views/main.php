@@ -57,20 +57,30 @@
         <div class="container mb-5">
             <div class="row text-center">
                 <div class="col">
-                    <p class="display-6 sub-judul mb-5" style="color: white;">Manfaat Sistem informasi Penerangan Jalan Umum</p>
+                    <p class="display-6 sub-judul mb-5" style="color: white;">Selamat Datang di Si Petarung Pati</p>
 
                 </div>
             </div>
             <div class="row align-items-start">
 
-                <div class="col">
+                <div class="col-4">
 
-                    <iframe class="rounded p-0 m-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1020377.2625667297!2d111.01823372017685!3d-2.556068929135152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e088d657f31bfc7%3A0x98c967d3b2f9a201!2sKabupaten%20Kotawaringin%20Barat%2C%20Kalimantan%20Tengah!5e0!3m2!1sid!2sid!4v1699783414694!5m2!1sid!2sid" width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe class="rounded p-0 m-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1020377.2625667297!2d111.01823372017685!3d-2.556068929135152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e088d657f31bfc7%3A0x98c967d3b2f9a201!2sKabupaten%20Kotawaringin%20Barat%2C%20Kalimantan%20Tengah!5e0!3m2!1sid!2sid!4v1699783414694!5m2!1sid!2sid" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                 </div>
                 <div class="col">
-                    <p class="text-white">Sistem informasi penerangan jalan umum (PJU) memiliki beberapa manfaat penting:</p>
-                    <table class="table table-dark table-borderless" style="font-size: 12px;">
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-white">Selamat Datang di Si Petarung Pati (Sistem Informasi Penataan Ruang Kabupaten Pati) yang dikembangkan oleh Dinas Pekerjaan Umum dan Penataan Ruang Kabupaten Pati yang memuat data/informasi perencanaan dan pemanfaatan ruang di Kabupaten Pati.
+                            </p>
+                            <p class="text-white">Si Petarung Pati merupakan media sosialisasi informasi penataan ruang kepada masyarakat luas dengan penyebarluasan informasi tentang rencana pemanfaatan ruang di Kabupaten Pati agar mudah diakses oleh masyarakat, pelaku usaha dan investor yang membutuhkan dan akan memanfaatkan ruang</p>
+                        </div>
+                        <div class="col">
+                            Statistika Pengunjung
+                        </div>
+                    </div>
+
+                    <!-- <table class="table table-dark table-borderless" style="font-size: 12px;">
                         <tbody>
                             <tr>
                                 <th scope="row">1</th>
@@ -99,17 +109,14 @@
                             </tr>
 
                         </tbody>
-                    </table>
-                    <p class="text-white">
-                        Dengan semua manfaat ini, sistem informasi penerangan jalan umum menjadi sangat penting untuk diterapkan.
-                    </p>
+                    </table> -->
 
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section id="section-3">
+<!-- <section id="section-3">
     <div class="container-fluid bg-dark h-100">
         <div class="container h-100 pb-5">
             <div class="row text-center">
@@ -145,4 +152,4 @@
         </div>
 
     </div>
-</section>
+</section> -->
