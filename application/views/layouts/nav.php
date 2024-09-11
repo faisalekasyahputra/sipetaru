@@ -13,11 +13,7 @@
                     <a class="nav-link" aria-current="page" href="<?= base_url('welcome') ?>">Beranda</a>
                 </li>
 
-                <li class=" nav-item px-2">
-                    <a class="btn nav-link d-flex align-items-center" aria-current="page" href="<?= base_url('index.php/Welcome/data_pju') ?>" type="button">
-                        <p class="m-0">Profil</p></i>
-                    </a>
-                </li>
+
                 <li class=" dropdown d-flex px-2">
                     <a class="btn nav-link d-flex align-items-center " href="#" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <p class="m-0">Profil</p> <i class="fa fa-sort-down ms-2 mb-2" aria-hidden="true"></i>
