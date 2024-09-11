@@ -668,7 +668,7 @@
         "id": 'admin14',
         "nama_peta": "Pola Ruang",
         "tid": 14,
-        "layer": pola_ruang,
+
     };
     var ren1 = [x];
     var base_ren1 = '';
