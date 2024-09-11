@@ -30,10 +30,13 @@
                     <div class="card mb-3 glass rounded-4 position-relative " data-aos="fade-up" data-aos-offset="0" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
 
                         <div class="card-body d-flex flex-row">
-                            <div class="col glass me-2 rounded-2"><dotlottie-player class="m-auto" src="https://lottie.host/332b8793-f0eb-4f17-936e-296d7e5db66c/8neWlkCbMY.json" background="transparent" speed="3" style="width: 150px;" loop autoplay></dotlottie-player></div>
+                            <div class="col glass me-3 rounded-2 d-flex justify-content-center">
+                                <img class="img-thumbnail border border-0  w-100 bg-transparent " src="<?= base_url('assets/img/3d-view-map.png') ?>" alt="">
+
+                            </div>
                             <div class="col ">
                                 <div class="col">
-                                    <h4 class="card-title fw-bolder text-start">Peta Dasar</h4>
+                                    <h4 class="card-title dela-gothic-one-regular text-white text-start ">ONE MAP</h4>
                                 </div>
                                 <div class="col overflow-y-scroll" style="max-height:100px;"><small style="font-size: 10px; " class="card-text text-muted text-break ">Peta yang menyajikan unsur-unsur alam dan atau buatan manusia, yang berada di permukaan bumi, digambarkan pada suatu bidang datar dengan skala, penomoran, proyeksi, dan georeferensi tertentu</small></div>
 
@@ -53,9 +56,12 @@
                     <div class="card mb-3 glass rounded-4 position-relative " data-aos="fade-up" data-aos-offset="0" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
 
                         <div class="card-body d-flex flex-row">
-                            <div class="col glass me-2 rounded-2"><dotlottie-player class="m-auto" src="https://lottie.host/332b8793-f0eb-4f17-936e-296d7e5db66c/8neWlkCbMY.json" background="transparent" speed="3" style="width: 150px;" loop autoplay></dotlottie-player></div>
+                            <div class="col glass me-3 rounded-2 d-flex justify-content-center">
+                                <img class="img-thumbnail border border-0  w-100 bg-transparent " src="<?= base_url('assets/img/3d-view-map.png') ?>" alt="">
+
+                            </div>
                             <div class="col">
-                                <h4 class="card-title fw-bolder text-start">Peta Tematik</h4>
+                                <h4 class="card-title fw-bolder text-start">POLA RUANG</h4>
                                 <small style="font-size: 10px; " class="card-text text-muted text-break">Peta yang menggambarkan tema tertentu yang digunakan untuk pembuatan peta rencana tata ruang.</small>
                             </div>
 
@@ -72,9 +78,11 @@
                     <div class="card mb-3 glass rounded-4 position-relative " data-aos="fade-up" data-aos-offset="0" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
 
                         <div class="card-body d-flex flex-row">
-                            <div class="col glass me-2 rounded-2"><dotlottie-player class="m-auto" src="https://lottie.host/332b8793-f0eb-4f17-936e-296d7e5db66c/8neWlkCbMY.json" background="transparent" speed="3" style="width: 150px;" loop autoplay></dotlottie-player></div>
+                            <div class="col glass me-3 rounded-2 d-flex justify-content-center">
+                                <img class="img-thumbnail border border-0  w-100 bg-transparent " src="<?= base_url('assets/img/3d-view-map.png') ?>" alt="">
+                            </div>
                             <div class="col">
-                                <h4 class="card-title fw-bolder text-start">Peta Rencana</h4>
+                                <h4 class="card-title fw-bolder text-start">PELAYANAN</h4>
                                 <small style="font-size: 10px; " class="card-text text-muted text-break">Menyajikan peta rencana struktur ruang dan pola ruang dari hasil Perencanaan Tata Ruang.</small>
                             </div>
 
@@ -107,7 +115,7 @@
 
                 <div class="col-4">
 
-                    <iframe class="rounded p-0 m-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1020377.2625667297!2d111.01823372017685!3d-2.556068929135152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e088d657f31bfc7%3A0x98c967d3b2f9a201!2sKabupaten%20Kotawaringin%20Barat%2C%20Kalimantan%20Tengah!5e0!3m2!1sid!2sid!4v1699783414694!5m2!1sid!2sid" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe class=" rounded p-0 m-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.151083003892!2d111.02899680921614!3d-6.751421993216891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70d24e652a6c0f%3A0x7a9f94931b3f4475!2sDinas%20Pekerjaan%20Umum%20dan%20Penataan%20Ruang%20Kabupaten%20Pati!5e0!3m2!1sid!2sid!4v1726051656756!5m2!1sid!2sid" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                 </div>
                 <div class="col">
