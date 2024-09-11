@@ -1,0 +1,120 @@
++Peta Dasar :
+Peta Admin
+-Administrasi Desa
+-Administrasi Kecamatan
+
+Peta Perairan
+- Bathimetri
+- Bendungan/Waduk
+- Garis Pantai
+- Sungai
+
+Peta Kontur
+- Kontur
+
+Peta Penutup Lahan
+-Penutup Lahan
+
+Peta Toponim
+- Toponim
+
++Peta Tematik
+Peta Fasilitas Umum dan Sosial
+-Fasum dan Fasos
+
+Peta Kependudukan
+-Kependudukan
+
+Peta Pertanian
+-Pertanian
+
+Peta Sumberdaya air
+-Cekungan Air Tanah
+-Daerah Aliran Sungai
+-Hidrogeologi Litologi Akuifer
+-Hidrogeologi Produktifitas Akuifer
+
+Peta Sumberdaya Tanah
+-Jenis Tanah
+
+Peta Topologi dan Kelerangan
+-Kelerengan
+-Ketinggian
+
+Peta Klimatologi
+-Curah Hujan
+
+Peta Kebencanaan
+-Rawan Bencana Kekeringan
+-Rawan Bencana Banjir
+-Rawan Bencana Longsor
+
+Peta Sumberdaya Alam
+-Wilayah pertambangan
+-Kesesuaian Lahan
+-KBAK Sukolilo
+-Kehutanan
+
+Peta Geologi
+-Geologi
+
+Peta Fisik Lainnya
+-Penggunaan Lahan
+
+Peta Ruang Terbuka Hijau
+-Ruang Terbuka Hijau
+
+Peta Eksisting
+-Jaringan Listrik
+-Gardu Induk
+-Menara Telekomunikasi
+-Tempat Pemrosesan Akhir
+-Sarana Transportasi
+-Jaringan Transportasi
+-Bendung
+-Embung
+-Waduk
+-Ruang Evakuasi
+-Jaringan Irigasi
+-Layanan PDAM
+-Jaringan PDAM
+-Daerah Irigasi
+
++Peta Rencana
+Peta Fasilitas Umum dan Fasilitas Sosial
+-Fasilitas Umum dan Sosial
+Peta Pola Ruang
+-Rawan Bencana Longsor
+-KBAK Sukolilo
+-Kawasan Resapan Air
+-Kawasan Pertanian Pangan Berkelanjutan
+-Pola Ruang
+
+Peta Jaringan Transportasi
+-Jaringan Transportasi
+-Sarana Transportasi
+
+Peta Sistem Perkotaan
+-Satuan Wilayah Pembangunan
+-Pusat Pelayanan Perkotaan
+
+Peta Jaringan Telekomunikasi
+-Jaringan Tetap
+-Jarigan Bergerak Seluler
+
+Peta Jaringan Energi
+-Jaringan Energi
+-Kelistrikan
+
+Peta Jaringan Sumberdaya air
+-Jaringan Sumberdaya air
+-Air permukaan
+
+Peta Prasarana Lainnya
+-Sistem Peyediaan Air Minum
+-Jaringan Evakuasi Bencana
+-Ruang Evakuasi
+-Jaringan Persampahan Wilayah
+
+Peta Kawasan Strategis
+-Kawasan Strategis

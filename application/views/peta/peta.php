@@ -179,7 +179,7 @@
         margin-left: 250px
     }
 
-    #from_admin {
+    #frame_peta1 {
         display: none;
     }
 
@@ -474,6 +474,58 @@
     peta6 = new L.BingLayer("AvZ2Z8Jve41V_bnPTe2mw4Xi8YWTyj2eT87tSGSsezrYWiyaj0ldMaVdkyf8aik6", {
         type: 'AerialWithLabels'
     });
+
+    function find_base(e) {
+        var radio = document.getElementById("ra" + e);
+        for (let i = 0; i < base.length; i++) {
+            let obj = base[i];
+            if (i == e) {
+                obj.layer.addTo(map);
+            } else {
+                obj.layer.remove(map);
+            }
+        }
+    }
+
+    function hid_bese() {
+
+        var f = document.getElementById('from_base');
+
+        f.style.display = "none";
+
+        var d = document.getElementById('dr_atas');
+
+        d.innerHTML = '<a href="#" onclick="show_bese()" ><img src="<?= base_url('assets/img/arrow_down.png') ?>"></a>'
+
+    }
+
+    function show_bese() {
+
+        var f = document.getElementById('from_base');
+
+        f.style.display = "block";
+
+        var d = document.getElementById('dr_atas');
+
+        d.innerHTML = '<a href="#" onclick="hid_bese()" ><img src="<?= base_url('assets/img/arrow_up.png') ?>"></a>'
+
+    }
+
+    function show_admin(i) {
+        var f = document.getElementById('frame_peta' + i);
+        f.style.display = "block";
+        var d = document.getElementById('panah' + i);
+        d.innerHTML = '<a href="#" onclick="hid_admin(i)" ><img src="<?= base_url('assets/img/arrow_up.png') ?>"></a>'
+
+    }
+
+    function hid_admin(i) {
+        var f = document.getElementById('frame_peta' + i);
+        f.style.display = "none";
+        var d = document.getElementById('panah' + i);
+        d.innerHTML = '<a href="#" onclick="show_admin(i)" ><img src="<?= base_url('assets/img/arrow_down.png') ?>"></a>'
+    }
+    //------------------------------------------------------------------------------------------------
     var map = L.map('map', {
         center: [-6.753482, 111.0374407],
         zoom: 13,
@@ -595,7 +647,7 @@
     var info = L.control({
         position: 'topright'
     });
-    var base_ren1 = '';
+
     var base_label = '';
     for (let i = 0; i < base.length; i++) {
         let obj = base[i];
@@ -610,41 +662,59 @@
         }
 
     }
+    var ren1 = [{
+        "id": 'admin14',
+        "nama_peta": "Pola Ruang",
+        "tid": 14,
+    }, ];
+    var base_ren1 = '';
+    var isi_ren1 = [];
+    var isi_r_ren1 = [];
+    for (let i = 0; i < ren1.length; i++) {
+        let obj = ren1[i];
+        isi_ren1[i] = '';
+        base_ren1 = base_ren1 + '<input type="checkbox"  name="cek" checked="true" onClick="find_ren1(' +
+            obj.tid + ')" id="ren1' + obj.tid + '" value="' + obj.layer + '"><label for="html">' +
+            obj.nama_peta + '</label><br><input type="range" id="rt_ren1' +
+            obj.tid + '" style="display:inline-block" oninput="set_transp_ren1(this.value,' +
+            obj.tid + ')" min="0" max="10" value = "5"  name="fav_language" ><hr>';
+    }
     info.onAdd = function(map) {
 
         this._div = L.DomUtil.create('div', 'info');
         this._div.id = "tubuh";
+        //header basemaps
         head = L.DomUtil.create('div', 'atas');
-        this._dalamatas = L.DomUtil.create('div', 'center');
-        this._dalamatas.innerHTML = '<h6><b>Base Maps</b></h6>';
-        this._arrow = L.DomUtil.create('div', 'drop');
-        this._arrow.id = 'dr_atas';
-        this._arrow.innerHTML = '<a href="#" onclick="hid_bese()" ><img src="<?= base_url('assets/img/arrow_up.png') ?>"></a>';
-
-        head.append(this._dalamatas);
-        head.append(this._arrow);
+        this._atas = L.DomUtil.create('div', 'center');
+        this._atas.innerHTML = '<h6><b>Base Maps</b></h6>';
+        head.append(this._atas);
+        panah = L.DomUtil.create('div', 'drop');
+        panah.id = 'dr_atas';
+        panah.innerHTML = '<a href="#" onclick="hid_bese()" ><img src="<?= base_url('assets/img/arrow_up.png') ?>"></a>';
+        head.append(panah);
         this._div.append(head);
 
+        //label_basemap
         frame_base_map = L.DomUtil.create('div', 'box_basemap');
         frame_base_map.id = "from_base";
         frame_base_map.innerHTML = base_label;
         this._div.append(frame_base_map);
 
-        rencana = L.DomUtil.create('div', 'atas');
-        rencana.innerHTML = '<div class="center"><h6><b>Peta Rencana Pola Ruang</b></h6></div>';
-        this._div.append(rencana);
-        this._arrow_ren = L.DomUtil.create('div', 'drop');
-        this._arrow_ren.id = 'dr_ren';
-
-        rencana.append(this._arrow_ren);
-        frame_rencana = L.DomUtil.create('div', 'box_basemap');
-        frame_rencana.id = "from_rencana";
-        frame_rencana.innerHTML = base_ren1;
-        this._div.append(frame_rencana);
+        peta1 = L.DomUtil.create('div', 'atas');
+        peta1.innerHTML = '<div class="center"><h6><b>Peta Administrasi</b></h6></div>';
+        panah_peta1 = L.DomUtil.create('div', 'drop');
+        panah_peta1.innerHTML = '<a href="#" onclick="show_admin(1)" ><img src="<?= base_url('assets/img/arrow_down.png') ?>"></a>';
+        panah_peta1.id = 'panah1';
+        peta1.append(panah_peta1);
+        this._div.append(peta1);
 
 
-        this._div.setAttribute("onmouseleave", "enab()");
-        this._div.setAttribute("onmouseover", "temporary_disabled()");
+        frame_peta1 = L.DomUtil.create('div', 'box_basemap');
+        frame_peta1.id = "frame_peta1"
+        frame_peta1.innerHTML = 'dada';
+        this._div.append(frame_peta1);
+
+
 
         return this._div;
 
