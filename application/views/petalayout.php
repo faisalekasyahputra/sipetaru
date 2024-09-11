@@ -15,7 +15,7 @@
     html,
     body,
     #map {
-      height: 98vh;
+      height: 80vh;
       width: 100%;
     }
   </style>
@@ -95,7 +95,7 @@
       </div>
     </div>
   </nav>
-  <div class="col align-items-center halaman position-absolute m-3 d-flex glass p-3 rounded start-100" style="z-index: 3;">
+  <div class="col align-items-center halaman position-absolute m-3 d-flex glass p-3 rounded " style="z-index: 3;">
     <dotlottie-player class="me-2 ms-0" src="https://lottie.host/aa8aabbf-895c-41df-b8ee-13f720dfcdf2/actgKuY5Fe.json" background="transparent" speed="2" style="width: 30px;" loop autoplay></dotlottie-player>
     <p class="h5 m-0 me-3 text-white text-capitalize dela-gothic-one-regular">Peta Dasar</p>
   </div>

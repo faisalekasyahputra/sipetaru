@@ -23,7 +23,7 @@
 
     #map {
         width: auto;
-        height: 92%;
+        height: 90%;
         position: relative;
         z-index: 1;
     }
