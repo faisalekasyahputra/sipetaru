@@ -578,47 +578,60 @@
     var info = L.control({
         position: 'topright'
     });
+    var base_ren1 = '';
+    var base_label = '';
+    for (let i = 0; i < base.length; i++) {
+        let obj = base[i];
+        if (i == 2) {
+            base_label = base_label + '<input type="radio" id="ra' +
+                obj.id + '" onClick="find_base(' + obj.tid + ')" checked ="true" name="peta" value="' +
+                obj.id + '"><label for="html">' + obj.nama_peta + '</label><br>';
+        } else {
+            base_label = base_label + '<input type="radio" id=ra"' +
+                obj.id + '" onClick="find_base(' + obj.tid + ')" name="peta" value="' +
+                obj.id + '"><label for="html">' + obj.nama_peta + '</label><br>';
+        }
 
+    }
     info.onAdd = function(map) {
 
         this._div = L.DomUtil.create('div', 'info');
-
         this._div.id = "tubuh";
-
         head = L.DomUtil.create('div', 'atas');
-
         this._dalamatas = L.DomUtil.create('div', 'center');
-
         this._dalamatas.innerHTML = '<h6><b>Base Maps</b></h6>';
-
-        return this._div;
         this._arrow = L.DomUtil.create('div', 'drop');
-
         this._arrow.id = 'dr_atas';
-
         this._arrow.innerHTML = '<a href="#" onclick="hid_bese()" ><img src="<?= base_url('assets/img/arrow_up.png') ?>"></a>';
 
-
-
         head.append(this._dalamatas);
-
         head.append(this._arrow);
-
         this._div.append(head);
+
         frame_base_map = L.DomUtil.create('div', 'box_basemap');
-
         frame_base_map.id = "from_base";
-
         frame_base_map.innerHTML = base_label;
-
         this._div.append(frame_base_map);
-        rame_base_map = L.DomUtil.create('div', 'box_basemap');
 
-        frame_base_map.id = "from_base";
+        rencana = L.DomUtil.create('div', 'atas');
+        rencana.innerHTML = '<div class="center"><h6><b>Peta Rencana Pola Ruang</b></h6></div>';
+        this._div.append(rencana);
+        this._arrow_ren = L.DomUtil.create('div', 'drop');
+        this._arrow_ren.id = 'dr_ren';
 
-        frame_base_map.innerHTML = base_label;
+        rencana.append(this._arrow_ren);
+        frame_rencana = L.DomUtil.create('div', 'box_basemap');
+        frame_rencana.id = "from_rencana";
+        frame_rencana.innerHTML = base_ren1;
+        this._div.append(frame_rencana);
 
-        this._div.append(frame_base_map);
+
+        this._div.setAttribute("onmouseleave", "enab()");
+        this._div.setAttribute("onmouseover", "temporary_disabled()");
+
+        return this._div;
+
+
 
     }
 
