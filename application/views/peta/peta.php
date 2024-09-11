@@ -663,20 +663,25 @@
         }
 
     }
+    <?php foreach ($peta as $p) {
+        $id = $p->id;
+        $geo = $this->Buka_peta->frd('mp_geojson', $id, 'Kelompok', null, null);
+        foreach ($geo as $g) {
+    ?>
+            var x = {
+                "id": 'admin14',
+                "nama_peta": "Pola Ruang",
+                "tid": 14,
 
-    var x = {
-        "id": 'admin14',
-        "nama_peta": "Pola Ruang",
-        "tid": 14,
+            };
+        <?php } ?>
 
-    };
+    <?php } ?>
     var ren1 = [x];
     var base_ren1 = '';
-    var isi_ren1 = [];
-
     for (let i = 0; i < ren1.length; i++) {
         let obj = ren1[i];
-        isi_ren1[i] = '';
+
         base_ren1 = base_ren1 + '<input type="checkbox"  name="cek" checked="true" onClick="find_ren1(' +
             obj.tid + ')" id="ren1' + obj.tid + '" ><label for="html">' +
             obj.nama_peta + '</label><br><input type="range" id="rt_ren1' +
