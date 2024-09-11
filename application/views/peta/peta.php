@@ -52,16 +52,16 @@
 
         overflow-y: scroll;
 
-        scrollbar-color: rebeccapurple green;
+        scrollbar-color: transparent;
 
         font-family: 'Poppins', sans-serif;
 
-        background: white;
-        background: rgba(255, 255, 255, 0.8);
+        background: rgba(255, 255, 255, 0.28);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        -webkit-backdrop-filter: blur(9.2px);
+        backdrop-filter: blur(9.2px);
 
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-
-        border-radius: 5px;
+        border-radius: 10px;
 
         display: block;
 
@@ -107,23 +107,27 @@
 
     }
 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+    }
+
     .atas {
+        position: relative;
+        width: 100%;
 
-        width: 284px;
-
-        height: 30px;
-
-        padding: 6px 8px;
+        margin-bottom: 5px;
+        padding: 5px;
 
         font-family: 'Poppins', sans-serif;
 
-        background: rgba(0, 145, 168, 0.8);
+        background: #0d6efd;
 
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-
-        vertical-align: text-top;
-
-        border-radius: 2px;
+        border-radius: 5px;
     }
 
     .ataspencarian {
@@ -164,19 +168,23 @@
 
     .center {
 
-        margin: 0;
 
-        position: absolute;
+        display: flex;
 
-        justify-content: center;
 
         align-items: center;
 
     }
 
     .drop {
-        padding-top: 10px;
-        margin-left: 250px
+
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin-right: 10px;
+        margin-top: 5px;
+
     }
 
 
