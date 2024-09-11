@@ -42,8 +42,8 @@
 </section>
 
 <!-- Section 2 -->
-<section id="section-2" class="position-relative">
-    <div class="container-fluid py-5 bg-dark">
+<section id="section-2">
+    <div class="container-fluid py-5 bg-dark position-relative">
         <div class="container mb-5">
             <div class="row text-center">
                 <div class="col">
@@ -104,9 +104,10 @@
 
                 </div>
             </div>
+            <dotlottie-player src="https://lottie.host/embed/262b4002-942e-48c7-a4c4-9a4a05ed113a/k87BJysSiy.json" background="transparent" speed="0.5" style="width: 100%;" loop autoplay></dotlottie-player>
+            <iframe width="100%" class="position-absolute bottom-0" src="https://lottie.host/embed/262b4002-942e-48c7-a4c4-9a4a05ed113a/k87BJysSiy.json"></iframe>
         </div>
     </div>
-    <iframe class="position-absolute" src="https://lottie.host/embed/262b4002-942e-48c7-a4c4-9a4a05ed113a/k87BJysSiy.json"></iframe>
 
 </section>
 
