@@ -60,9 +60,14 @@
 
 
 
-                <a class="btn nav-link d-flex align-items-center " href="<?= base_url('index.php/Welcome/statistik') ?>" type="button" <p class="m-0">Statistik</p>
+                <a class="btn nav-link d-flex align-items-center " href="<?= base_url('index.php/Welcome/statistik') ?>" type="button" <p class="m-0">Saran dan Masukkan</p>
                 </a>
 
+                <a class="btn nav-link d-flex align-items-center " href="<?= base_url('index.php/Welcome/statistik') ?>" type="button" <p class="m-0">Unduh</p>
+                </a>
+
+                <a class="btn nav-link d-flex align-items-center " href="<?= base_url('index.php/Welcome/statistik') ?>" type="button" <p class="m-0">Tutorial</p>
+                </a>
                 </li>
 
                 <li class="nav-item px-2">

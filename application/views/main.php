@@ -6,7 +6,7 @@
         <div class="container m-auto mb-2">
             <div class="row align-items-center m-auto">
                 <div class="col d-flex" data-aos="fade-up" data-aos-offset="0" data-aos-delay="150" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
-                    <dotlottie-player src="https://lottie.host/74627a59-6910-4c80-9159-ab97124633db/hNZnD6T3Zj.json" background="transparent" speed="0.5" style="width: 60px;" loop autoplay></dotlottie-player>
+                    <dotlottie-player src="https://lottie.host/f7c9767f-2a74-485a-8bb6-d1256bf26c3c/8NDZiVKqJ6.json" background="transparent" speed="0.5" style="width: 60px;" loop autoplay></dotlottie-player>
 
                     <div class="col py-3">
                         <p class="h2 m-0 fw-bolder judul text-white text-capitalize">Sistem informasi penataan ruang kabupaten pati</p>
@@ -15,7 +15,7 @@
                     </div>
                 </div>
                 <div class="col d-flex justify-content-end " data-aos="fade-up" data-aos-offset="0" data-aos-delay="150" data-aos-duration="900" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
-                    <img class="img-thumbnail border border-0 vibrate-1 w-75 bg-transparent" src="<?= base_url('assets/img/img_konten.png') ?>" alt="">
+                    <img class="img-thumbnail border border-0 vibrate-1 w-75 bg-transparent" src="<?= base_url('assets/img/land.png') ?>" alt="">
                 </div>
             </div>
 
@@ -42,7 +42,7 @@
 </section>
 
 <!-- Section 2 -->
-<section id="section-2">
+<section id="section-2" class="position-relative">
     <div class="container-fluid py-5 bg-dark">
         <div class="container mb-5">
             <div class="row text-center">
@@ -106,6 +106,8 @@
             </div>
         </div>
     </div>
+    <iframe class="position-absolute" src="https://lottie.host/embed/262b4002-942e-48c7-a4c4-9a4a05ed113a/k87BJysSiy.json"></iframe>
+
 </section>
 
 <!-- <section id="section-3">
