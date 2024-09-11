@@ -82,7 +82,7 @@
 
                             <div class="card-body d-flex flex-row">
                                 <div class="col glass me-3 rounded-2 d-flex justify-content-center">
-                                    <img class="img-thumbnail border border-0  w-75 bg-transparent " src="<?= base_url('assets/img/file.png') ?>" alt="">
+                                    <img class="img-thumbnail border border-0  w-75 bg-transparent " src="<?= base_url('assets/img/34.png') ?>" alt="">
                                 </div>
                                 <div class="col">
                                     <h4 class="card-title dela-gothic-one-regular text-dark text-start ">PELAYANAN</h4>
