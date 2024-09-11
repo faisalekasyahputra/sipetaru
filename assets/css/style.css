@@ -147,6 +147,10 @@ html {
 	background: #555;
 }
 
+a {
+	text-decoration-line: none;
+	text-decoration: none !important;
+}
 .glass {
 	background: rgba(255, 255, 255, 0.28);
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -226,4 +230,9 @@ a.dropdown-item {
 a.dropdown-item:hover {
 	color: var(--w-secondary) !important;
 	padding-left: 20px !important;
+}
+.card:hover {
+	scale: 1.01;
+	-webkit-backdrop-filter: blur(0px) !important;
+	backdrop-filter: blur(0px) !important;
 }

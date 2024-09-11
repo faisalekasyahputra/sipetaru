@@ -13,8 +13,8 @@
 
                     <div class="col py-3">
                         <p class="lead fs-small badge text-bg-primary mb-0">SIPETARUNG KABUPATEN PATI</p>
-                        <p class="display-5 text-white text-capitalize dela-gothic-one-regular">Sistem informasi <br>penataan ruang kabupaten pati</p>
-                        <p class="h2 fw-bold subjudul text-primary">Dinas DPUPR</p>
+                        <p class="display-5 text-dark text-capitalize dela-gothic-one-regular">Sistem informasi <br>penataan ruang kabupaten pati</p>
+                        <p class="h2 text-dark">Dinas DPUPR</p>
                         <small class="lead fs-medium "> Kabupaten Pati</small>
                     </div>
                 </div>
@@ -27,72 +27,75 @@
 
             <div class="row justify-content-center g-3 p-3 position-absolute bottom-0 ">
                 <div class="col-md-4 ">
-                    <div class="card mb-3 glass rounded-4 position-relative " data-aos="fade-up" data-aos-offset="0" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
+                    <a href="">
+                        <div class="card mb-3 glass rounded-4 position-relative h-100" data-aos="fade-up" data-aos-offset="0" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
 
-                        <div class="card-body d-flex flex-row">
-                            <div class="col glass me-3 rounded-2 d-flex justify-content-center">
-                                <img class="img-thumbnail border border-0  w-100 bg-transparent " src="<?= base_url('assets/img/3d-view-map.png') ?>" alt="">
+                            <div class="card-body d-flex flex-row">
+                                <div class="col glass me-3 rounded-2 d-flex justify-content-center">
+                                    <img class="img-thumbnail border border-0  w-75 bg-transparent " src="<?= base_url('assets/img/3d-view-map.png') ?>" alt="">
 
-                            </div>
-                            <div class="col ">
-                                <div class="col">
-                                    <h4 class="card-title dela-gothic-one-regular text-white text-start ">ONE MAP</h4>
                                 </div>
-                                <div class="col overflow-y-scroll" style="max-height:100px;"><small style="font-size: 10px; " class="card-text text-muted text-break ">Peta yang menyajikan unsur-unsur alam dan atau buatan manusia, yang berada di permukaan bumi, digambarkan pada suatu bidang datar dengan skala, penomoran, proyeksi, dan georeferensi tertentu</small></div>
+                                <div class="col ">
+                                    <div class="col">
+                                        <h4 class="card-title dela-gothic-one-regular text-dark text-start ">ONE MAP</h4>
+                                    </div>
+                                    <div class="col overflow-y-scroll" style="max-height:100px;"><small style="font-size: 10px; " class="card-text text-muted text-break ">Peta yang menyajikan unsur-unsur alam dan atau buatan manusia, yang berada di permukaan bumi, digambarkan pada suatu bidang datar dengan skala, penomoran, proyeksi, dan georeferensi tertentu</small></div>
+
+
+                                </div>
+
+                                <!-- <dotlottie-player class="m-auto position-absolute top-0" src="https://lottie.host/89e46c0c-2182-4577-a5d5-16ddfe3c7673/jFrw6mz6G2.json" background="transparent" speed="0.5" style="width: 200px;" loop autoplay></dotlottie-player> -->
+
 
 
                             </div>
-
-                            <!-- <dotlottie-player class="m-auto position-absolute top-0" src="https://lottie.host/89e46c0c-2182-4577-a5d5-16ddfe3c7673/jFrw6mz6G2.json" background="transparent" speed="0.5" style="width: 200px;" loop autoplay></dotlottie-player> -->
-
-
-
                         </div>
-                    </div>
-
+                    </a>
 
                 </div>
                 <div class="col-md-4 ">
-                    <div class="card mb-3 glass rounded-4 position-relative " data-aos="fade-up" data-aos-offset="0" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
+                    <a href="">
+                        <div class="card mb-3 glass rounded-4 position-relative h-100" data-aos="fade-up" data-aos-offset="0" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
 
-                        <div class="card-body d-flex flex-row">
-                            <div class="col glass me-3 rounded-2 d-flex justify-content-center">
-                                <img class="img-thumbnail border border-0  w-100 bg-transparent " src="<?= base_url('assets/img/3d-view-map.png') ?>" alt="">
+                            <div class="card-body d-flex flex-row">
+                                <div class="col glass me-3 rounded-2 d-flex justify-content-center">
+                                    <img class="img-thumbnail border border-0  w-100 bg-transparent " src="<?= base_url('assets/img/peta.png') ?>" alt="">
+
+                                </div>
+                                <div class="col">
+                                    <h4 class="card-title dela-gothic-one-regular text-dark text-start ">POLA RUANG</h4>
+                                    <small style="font-size: 10px; " class="card-text text-muted text-break">Peta yang menggambarkan tema tertentu yang digunakan untuk pembuatan peta rencana tata ruang.</small>
+                                </div>
+
+                                <!-- <dotlottie-player class="m-auto position-absolute top-0" src="https://lottie.host/89e46c0c-2182-4577-a5d5-16ddfe3c7673/jFrw6mz6G2.json" background="transparent" speed="0.5" style="width: 200px;" loop autoplay></dotlottie-player> -->
+
+
 
                             </div>
-                            <div class="col">
-                                <h4 class="card-title fw-bolder text-start">POLA RUANG</h4>
-                                <small style="font-size: 10px; " class="card-text text-muted text-break">Peta yang menggambarkan tema tertentu yang digunakan untuk pembuatan peta rencana tata ruang.</small>
-                            </div>
-
-                            <!-- <dotlottie-player class="m-auto position-absolute top-0" src="https://lottie.host/89e46c0c-2182-4577-a5d5-16ddfe3c7673/jFrw6mz6G2.json" background="transparent" speed="0.5" style="width: 200px;" loop autoplay></dotlottie-player> -->
-
-
-
                         </div>
-                    </div>
-
+                    </a>
 
                 </div>
                 <div class="col-md-4 ">
-                    <div class="card mb-3 glass rounded-4 position-relative " data-aos="fade-up" data-aos-offset="0" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
+                    <a href="">
+                        <div class="card mb-3 glass rounded-4 position-relative h-100 " data-aos="fade-up" data-aos-offset="0" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
 
-                        <div class="card-body d-flex flex-row">
-                            <div class="col glass me-3 rounded-2 d-flex justify-content-center">
-                                <img class="img-thumbnail border border-0  w-100 bg-transparent " src="<?= base_url('assets/img/3d-view-map.png') ?>" alt="">
+                            <div class="card-body d-flex flex-row">
+                                <div class="col glass me-3 rounded-2 d-flex justify-content-center">
+                                    <img class="img-thumbnail border border-0  w-75 bg-transparent " src="<?= base_url('assets/img/file.png') ?>" alt="">
+                                </div>
+                                <div class="col">
+                                    <h4 class="card-title dela-gothic-one-regular text-dark text-start ">PELAYANAN</h4>
+                                    <small style="font-size: 10px; " class="card-text text-muted text-break">Menyajikan peta rencana struktur ruang dan pola ruang dari hasil Perencanaan Tata Ruang.</small>
+                                </div>
+
+                                <!-- <dotlottie-player class="m-auto position-absolute top-0" src="https://lottie.host/89e46c0c-2182-4577-a5d5-16ddfe3c7673/jFrw6mz6G2.json" background="transparent" speed="0.5" style="width: 200px;" loop autoplay></dotlottie-player> -->
+
+
+
                             </div>
-                            <div class="col">
-                                <h4 class="card-title fw-bolder text-start">PELAYANAN</h4>
-                                <small style="font-size: 10px; " class="card-text text-muted text-break">Menyajikan peta rencana struktur ruang dan pola ruang dari hasil Perencanaan Tata Ruang.</small>
-                            </div>
-
-                            <!-- <dotlottie-player class="m-auto position-absolute top-0" src="https://lottie.host/89e46c0c-2182-4577-a5d5-16ddfe3c7673/jFrw6mz6G2.json" background="transparent" speed="0.5" style="width: 200px;" loop autoplay></dotlottie-player> -->
-
-
-
                         </div>
-                    </div>
-
+                    </a>
 
                 </div>
             </div>
