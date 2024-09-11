@@ -39,7 +39,9 @@
                                     <div class="col">
                                         <h4 class="card-title dela-gothic-one-regular text-dark text-start ">ONE MAP</h4>
                                     </div>
-                                    <div class="col overflow-y-scroll" style="max-height:100px;"><small style="font-size: 10px; " class="card-text text-muted text-break ">Peta yang menyajikan unsur-unsur alam dan atau buatan manusia, yang berada di permukaan bumi, digambarkan pada suatu bidang datar dengan skala, penomoran, proyeksi, dan georeferensi tertentu</small></div>
+                                    <div class="col"><small style="font-size: 10px; " class="card-text text-muted text-break ">Menampilkan Peta Spasial Berbasis Digital Diantaranya Peta Dasar, Tematik Dan Rencana
+
+                                        </small></div>
 
 
                                 </div>
@@ -64,7 +66,7 @@
                                 </div>
                                 <div class="col">
                                     <h4 class="card-title dela-gothic-one-regular text-dark text-start ">POLA RUANG</h4>
-                                    <small style="font-size: 10px; " class="card-text text-muted text-break">Peta yang menggambarkan tema tertentu yang digunakan untuk pembuatan peta rencana tata ruang.</small>
+                                    <small style="font-size: 10px; " class="card-text text-muted text-break">Menampilakn Peta Rencana Pola Ruang Yang Di Lengkapi Dengan Peraturan Zonasi (KUPZ</small>
                                 </div>
 
                                 <!-- <dotlottie-player class="m-auto position-absolute top-0" src="https://lottie.host/89e46c0c-2182-4577-a5d5-16ddfe3c7673/jFrw6mz6G2.json" background="transparent" speed="0.5" style="width: 200px;" loop autoplay></dotlottie-player> -->
@@ -86,7 +88,7 @@
                                 </div>
                                 <div class="col">
                                     <h4 class="card-title dela-gothic-one-regular text-dark text-start ">PELAYANAN</h4>
-                                    <small style="font-size: 10px; " class="card-text text-muted text-break">Menyajikan peta rencana struktur ruang dan pola ruang dari hasil Perencanaan Tata Ruang.</small>
+                                    <small style="font-size: 10px; " class="card-text text-muted text-break">Link Untuk Menuju Pelayanan Tata Ruang Dalam Mengurus Perizinan Tata Ruang (ITR)</small>
                                 </div>
 
                                 <!-- <dotlottie-player class="m-auto position-absolute top-0" src="https://lottie.host/89e46c0c-2182-4577-a5d5-16ddfe3c7673/jFrw6mz6G2.json" background="transparent" speed="0.5" style="width: 200px;" loop autoplay></dotlottie-player> -->
