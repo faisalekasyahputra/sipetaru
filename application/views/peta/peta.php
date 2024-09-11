@@ -40,7 +40,7 @@
 
     .info {
         padding: 10px;
-        translate: 0 25%;
+        translate: 0 100px;
 
         width: 300px;
 
