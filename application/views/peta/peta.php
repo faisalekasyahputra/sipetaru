@@ -39,6 +39,8 @@
     }
 
     .info {
+        padding: 10px;
+        translate: 0 25%;
 
         width: 300px;
 
