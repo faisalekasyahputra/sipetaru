@@ -65,13 +65,16 @@
           </a>
           <ul class="dropdown-menu mt-4 p-2" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/peta') ?>">Peta Dasar</a>
+              <a class="dropdown-item nav-link" href="<?= base_url('Peta/peta/1') ?>">Peta Dasar</a>
             </li>
             <li class="nav-item" role="presentation">
-              <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/peta') ?>">Peta Tematik </a>
+              <a class="dropdown-item nav-link" href="<?= base_url('Peta/peta/2') ?>">Peta Tematik </a>
             </li>
             <li class="nav-item" role="presentation">
-              <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/peta') ?>">Peta Rencana </a>
+              <a class="dropdown-item nav-link" href="<?= base_url('Peta/peta/3') ?>">Peta Rencana </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="dropdown-item nav-link" href="<?= base_url('Peta/peta/4') ?>">Pola Ruang </a>
             </li>
 
           </ul>
@@ -100,7 +103,7 @@
   </div>
   <div class="col align-items-center halaman position-absolute m-3 d-flex glass p-3 rounded top-0 end-0" style="z-index: 3;">
     <dotlottie-player class="me-2 ms-0" src="https://lottie.host/aa8aabbf-895c-41df-b8ee-13f720dfcdf2/actgKuY5Fe.json" background="transparent" speed="2" style="width: 30px;" loop autoplay></dotlottie-player>
-    <p class="h5 m-0 me-3 text-white text-capitalize dela-gothic-one-regular">Peta Dasar</p>
+    <p class="h5 m-0 me-3 text-white text-capitalize dela-gothic-one-regular"><?= $jns ?></p>
   </div>
   <?= $content ?>
   <footer class="container  glass position-absolute text-light text-center fixed-bottom rounded start-50" style="transform: translate(-50%, -50%);">

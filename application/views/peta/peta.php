@@ -179,11 +179,12 @@
         margin-left: 250px
     }
 
-    #frame_peta1 {
+
+    <?php foreach ($peta as $p) { ?>#frame_peta<?= $p->id ?> {
         display: none;
     }
 
-    #from_tematik {
+    <?php } ?>#from_tematik {
         display: none;
     }
 
@@ -515,7 +516,7 @@
         var f = document.getElementById('frame_peta' + i);
         f.style.display = "block";
         var d = document.getElementById('panah' + i);
-        d.innerHTML = '<a href="#" onclick="hid_admin(i)" ><img src="<?= base_url('assets/img/arrow_up.png') ?>"></a>'
+        d.innerHTML = '<a href="#" onclick="hid_admin(' + i + ')" ><img src="<?= base_url('assets/img/arrow_up.png') ?>"></a>'
 
     }
 
@@ -523,7 +524,7 @@
         var f = document.getElementById('frame_peta' + i);
         f.style.display = "none";
         var d = document.getElementById('panah' + i);
-        d.innerHTML = '<a href="#" onclick="show_admin(i)" ><img src="<?= base_url('assets/img/arrow_down.png') ?>"></a>'
+        d.innerHTML = '<a href="#" onclick="show_admin(' + i + ')" ><img src="<?= base_url('assets/img/arrow_down.png') ?>"></a>'
     }
     //------------------------------------------------------------------------------------------------
     var map = L.map('map', {
@@ -662,19 +663,22 @@
         }
 
     }
-    var ren1 = [{
+
+    var x = {
         "id": 'admin14',
         "nama_peta": "Pola Ruang",
         "tid": 14,
-    }, ];
+        "layer": pola_ruang,
+    };
+    var ren1 = [x];
     var base_ren1 = '';
     var isi_ren1 = [];
-    var isi_r_ren1 = [];
+
     for (let i = 0; i < ren1.length; i++) {
         let obj = ren1[i];
         isi_ren1[i] = '';
         base_ren1 = base_ren1 + '<input type="checkbox"  name="cek" checked="true" onClick="find_ren1(' +
-            obj.tid + ')" id="ren1' + obj.tid + '" value="' + obj.layer + '"><label for="html">' +
+            obj.tid + ')" id="ren1' + obj.tid + '" ><label for="html">' +
             obj.nama_peta + '</label><br><input type="range" id="rt_ren1' +
             obj.tid + '" style="display:inline-block" oninput="set_transp_ren1(this.value,' +
             obj.tid + ')" min="0" max="10" value = "5"  name="fav_language" ><hr>';
@@ -699,20 +703,25 @@
         frame_base_map.id = "from_base";
         frame_base_map.innerHTML = base_label;
         this._div.append(frame_base_map);
+        <?php foreach ($peta as $p) {
+            $m = $p->id;
+        ?>
+            peta<?= $m ?> = L.DomUtil.create('div', 'atas');
+            peta<?= $m ?>.innerHTML = '<div class="center"><h6><b><?= $p->Nama_Layer ?></b></h6></div>';
+            panah_peta<?= $m ?> = L.DomUtil.create('div', 'drop');
+            panah_peta<?= $m ?>.innerHTML = '<a href="#" onclick="show_admin(<?= $m ?>)" ><img src="<?= base_url('assets/img/arrow_down.png') ?>"></a>';
+            panah_peta<?= $m ?>.id = 'panah<?= $m ?>';
+            peta<?= $m ?>.append(panah_peta<?= $m ?>);
+            this._div.append(peta<?= $m ?>);
 
-        peta1 = L.DomUtil.create('div', 'atas');
-        peta1.innerHTML = '<div class="center"><h6><b>Peta Administrasi</b></h6></div>';
-        panah_peta1 = L.DomUtil.create('div', 'drop');
-        panah_peta1.innerHTML = '<a href="#" onclick="show_admin(1)" ><img src="<?= base_url('assets/img/arrow_down.png') ?>"></a>';
-        panah_peta1.id = 'panah1';
-        peta1.append(panah_peta1);
-        this._div.append(peta1);
+
+            frame_peta<?= $m ?> = L.DomUtil.create('div', 'box_basemap');
+            frame_peta<?= $m ?>.id = "frame_peta<?= $m ?>"
+            frame_peta<?= $m ?>.innerHTML = base_ren1;
+            this._div.append(frame_peta<?= $m ?>);
 
 
-        frame_peta1 = L.DomUtil.create('div', 'box_basemap');
-        frame_peta1.id = "frame_peta1"
-        frame_peta1.innerHTML = 'dada';
-        this._div.append(frame_peta1);
+        <?php } ?>
 
 
 
