@@ -42,3 +42,4 @@
 <script src="<?= base_url('assets/js/leaflet.groupedlayercontrol.js') ?>"></script>
 <script src="<?= base_url('/assets/js/Control.FullScreen.js') ?>"></script>
 <link rel="stylesheet" href="<?= base_url('assets/css/Control.FullScreen.css') ?>" />
+<script src="<?= base_url('assets/js/Bing.js') ?>"></script>

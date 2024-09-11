@@ -466,7 +466,12 @@
         maxZoom: 20,
         subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
     });
-
+    peta5 = new L.BingLayer("AvZ2Z8Jve41V_bnPTe2mw4Xi8YWTyj2eT87tSGSsezrYWiyaj0ldMaVdkyf8aik6", {
+        type: 'Road'
+    });
+    peta6 = new L.BingLayer("AvZ2Z8Jve41V_bnPTe2mw4Xi8YWTyj2eT87tSGSsezrYWiyaj0ldMaVdkyf8aik6", {
+        type: 'AerialWithLabels'
+    });
     var map = L.map('map', {
         center: [-6.753482, 111.0374407],
         zoom: 13,
@@ -573,6 +578,16 @@
 
         "layer": peta4
 
+    }, {
+        "id": "peta5",
+        "nama_peta": "Bing Road Map",
+        "tid": 4,
+        "layer": peta5
+    }, {
+        "id": "peta6",
+        "nama_peta": "Bing Aerial",
+        "tid": 5,
+        "layer": peta6
     }];
 
     var info = L.control({
