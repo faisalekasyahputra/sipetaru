@@ -1,0 +1,14 @@
+{
+"type": "FeatureCollection",
+"name": "Air Minum PT",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Eksisting": "Reservoir", "Rencana": "Reservoir", "Keterangan": "Pengembangan" }, "geometry": { "type": "Point", "coordinates": [ 111.04805277777777, -6.750405555555548 ] } },
+{ "type": "Feature", "properties": { "Eksisting": "Reservoir", "Rencana": "Reservoir", "Keterangan": "Pengembangan" }, "geometry": { "type": "Point", "coordinates": [ 111.016688888888893, -6.719380555555551 ] } },
+{ "type": "Feature", "properties": { "Eksisting": "Reservoir", "Rencana": "Reservoir", "Keterangan": "Pengembangan" }, "geometry": { "type": "Point", "coordinates": [ 111.013875, -6.73600555555556 ] } },
+{ "type": "Feature", "properties": { "Eksisting": "Reservoir", "Rencana": "Reservoir", "Keterangan": "Pengembangan" }, "geometry": { "type": "Point", "coordinates": [ 111.011827777777782, -6.735463888888888 ] } },
+{ "type": "Feature", "properties": { "Eksisting": "Reservoir", "Rencana": "Reservoir", "Keterangan": "Pengembangan" }, "geometry": { "type": "Point", "coordinates": [ 111.069630555555548, -6.66735 ] } },
+{ "type": "Feature", "properties": { "Eksisting": "Reservoir", "Rencana": "Reservoir", "Keterangan": "Pengembangan" }, "geometry": { "type": "Point", "coordinates": [ 111.071438888888892, -6.743438888888889 ] } },
+{ "type": "Feature", "properties": { "Eksisting": "Reservoir", "Rencana": "Reservoir", "Keterangan": "Pengembangan" }, "geometry": { "type": "Point", "coordinates": [ 111.142038888888891, -6.717136111111104 ] } }
+]
+}

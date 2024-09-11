@@ -42,13 +42,16 @@
                     </a>
                     <ul class="dropdown-menu mt-4 p-2" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/peta') ?>">Peta Dasar</a>
+                            <a class="dropdown-item nav-link" href="<?= base_url('Peta/peta/1') ?>">Peta Dasar</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/peta') ?>">Peta Tematik </a>
+                            <a class="dropdown-item nav-link" href="<?= base_url('Peta/peta/2') ?>">Peta Tematik </a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/peta') ?>">Peta Rencana </a>
+                            <a class="dropdown-item nav-link" href="<?= base_url('Peta/peta/3') ?>">Peta Rencana </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="dropdown-item nav-link" href="<?= base_url('Peta/peta/4') ?>">Pola Ruang </a>
                         </li>
 
                     </ul>

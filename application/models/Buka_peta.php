@@ -17,4 +17,13 @@ class Buka_peta extends CI_Model
             return NULL;
         }
     }
+    public function insert_data($tablename, $arg1)
+    {
+        $this->db->insert($tablename, $arg1);
+        if ($this->db->affected_rows() > 0) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
 }

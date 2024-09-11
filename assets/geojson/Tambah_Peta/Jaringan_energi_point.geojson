@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "Jaringan_energi_point",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "OBJECTID": 1, "NAMOBJ": "Gardu Induk", "ORDE01": 422000000, "ORDE02": 122030000, "ORDE03": 122030110, "ORDE04": 122030110, "JNSRSR": 3, "STSJRN": 2, "WADMPR": "Jawa Tengah", "WADMKK": "Pati", "SBDATA": "Survey Lapangan, 2018" }, "geometry": { "type": "Point", "coordinates": [ 111.052632492999976, -6.76700106200002, 0.0 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 2, "NAMOBJ": "Gardu Induk", "ORDE01": 422000000, "ORDE02": 122030000, "ORDE03": 122030110, "ORDE04": 122030110, "JNSRSR": 3, "STSJRN": 2, "WADMPR": "Jawa Tengah", "WADMKK": "Pati", "SBDATA": "Survey Lapangan, 2018" }, "geometry": { "type": "Point", "coordinates": [ 111.067058495000026, -6.618794099000013, 0.0 ] } }
+]
+}
