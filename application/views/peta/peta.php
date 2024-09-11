@@ -83,8 +83,8 @@
         }
     });
     var map = L.map('map', {
-        center: [-2.709125, 111.6491647],
-        zoom: 18,
+        center: [-6.7521643, 111.0816679],
+        zoom: 13,
         fullscreenControl: true,
         fullscreenControlOptions: {
             position: 'topleft'
@@ -122,8 +122,4 @@
             l.bindPopup(out.join("<br />"));
         }
     };
-
-    L.control.groupedLayers(baseLayers, groupedOverlays, {
-        collapsed: false
-    }).addTo(map);
 </script>
