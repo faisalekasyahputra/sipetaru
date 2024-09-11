@@ -4,7 +4,7 @@
 
         <div id="main" class="col p-1 bg-body-tertiary" data-aos="fade-up" data-aos-offset="0" data-aos-delay="150" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
 
-            <div id="map" class="rounded p-0 m-0" style="width: 100%; height:100vh"></div>
+            <div id="map" class="rounded p-0 m-0" style="width: 100%; height:99vh"></div>
 
         </div>
 
