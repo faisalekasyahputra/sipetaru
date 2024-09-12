@@ -107,6 +107,8 @@
 
     }
 
+
+
     h1,
     h2,
     h3,
@@ -187,14 +189,42 @@
 
     }
 
-
     <?php foreach ($peta as $p) {
-        if ($p->id != 1) { ?>#frame_peta<?= $p->id ?> {
+        $geo = $this->Buka_peta->frd('mp_geojson', $p->id, 'Kelompok', null, null);
+        foreach ($geo as $g) {
+    ?>.legend {
+        padding: 10px;
+        translate: 0 5%;
+        position: relative;
+        width: 300px;
+
+        max-width: 300px;
+        line-height: 25px;
+        height: auto;
+        overflow-y: hidden;
+        z-index: 400;
+
+    }
+
+    .legend i {
+        width: 20px;
+        height: 20px;
+        float: left;
+        margin-right: 8px;
+        opacity: 0.7;
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+
+    }
+
+    <?php }
+    } ?><?php foreach ($peta as $p) {
+            if ($p->id != 1) { ?>#frame_peta<?= $p->id ?> {
         display: none;
     }
 
     <?php }
-    } ?>#from_tematik {
+        } ?>#from_tematik {
         display: none;
     }
 
@@ -485,6 +515,75 @@
     peta6 = new L.BingLayer("AvZ2Z8Jve41V_bnPTe2mw4Xi8YWTyj2eT87tSGSsezrYWiyaj0ldMaVdkyf8aik6", {
         type: 'AerialWithLabels'
     });
+    var base = [{
+
+        "id": 'peta1',
+
+        "nama_peta": "Opensteet Map",
+
+        "tid": 0,
+
+        "layer": peta1
+
+
+
+    }, {
+
+        "id": 'peta2',
+
+        "nama_peta": "Google Road Map",
+
+        "tid": 1,
+
+        "layer": peta2
+
+    }, {
+
+        "id": "peta3",
+
+        "nama_peta": "Google Hybrid",
+
+        "tid": 2,
+
+        "layer": peta3
+
+    }, {
+
+        "id": "peta4",
+
+        "nama_peta": "Google Satelit",
+
+        "tid": 3,
+
+        "layer": peta4
+
+    }, {
+        "id": "peta5",
+        "nama_peta": "Bing Road Map",
+        "tid": 4,
+        "layer": peta5
+    }, {
+        "id": "peta6",
+        "nama_peta": "Bing Aerial",
+        "tid": 5,
+        "layer": peta6
+    }];
+
+    function enab() {
+        map._handlers.forEach(function(handler) {
+            handler.enable();
+        });
+    }
+
+    function temporary_disabled() {
+        map._handlers.forEach(function(handler) {
+            handler.disable();
+        });
+
+    }
+    var info = L.control({
+        position: 'topright'
+    });
 
     function find_base(e) {
         var radio = document.getElementById("ra" + e);
@@ -548,28 +647,50 @@
     function gaya_kecamatan(feature) {
         return {
             color: 'white',
-            weight: 0.2,
             fillOpacity: 0.05,
             weight: 0.5
         };
     }
+
+    function gaya_kecamatan1(feature) {
+        return {
+            color: 'red',
+
+            fillOpacity: 1,
+            weight: 1
+        };
+    }
+
+    function getColor(d) {
+        return d > 1000 ? '#800026' :
+            d > 500 ? '#BD0026' :
+            d > 200 ? '#E31A1C' :
+            d > 100 ? '#FC4E2A' :
+            d > 50 ? '#FD8D3C' :
+            d > 20 ? '#FEB24C' :
+            d > 10 ? '#FED976' : '#FFEDA0';
+    }
+
     //------------------------------------------------------------------------------------------------
 
     var kecamatan = L.geoJSON([<?= $kecamatan ?>], {
-        style: gaya_kecamatan,
-        onEachFeature: onEachkec
+
     });
+
     var map = L.map('map', {
         center: [-6.753482, 111.0374407],
         zoom: 12,
         maxZoom: 25,
         minZoom: 9,
-        layers: [peta3, kecamatan],
+        layers: [peta3],
         attributionControl: false,
         zoomControl: false,
     });
 
 
+    const legend = L.control({
+        position: 'bottomleft'
+    });
 
     map.on('dialog:opened', function(e) {
         console.log("dialog opened event fired.");
@@ -625,63 +746,7 @@
 
     attr.addTo(map);
 
-    var base = [{
 
-        "id": 'peta1',
-
-        "nama_peta": "Opensteet Map",
-
-        "tid": 0,
-
-        "layer": peta1
-
-
-
-    }, {
-
-        "id": 'peta2',
-
-        "nama_peta": "Google Road Map",
-
-        "tid": 1,
-
-        "layer": peta2
-
-    }, {
-
-        "id": "peta3",
-
-        "nama_peta": "Google Hybrid",
-
-        "tid": 2,
-
-        "layer": peta3
-
-    }, {
-
-        "id": "peta4",
-
-        "nama_peta": "Google Satelit",
-
-        "tid": 3,
-
-        "layer": peta4
-
-    }, {
-        "id": "peta5",
-        "nama_peta": "Bing Road Map",
-        "tid": 4,
-        "layer": peta5
-    }, {
-        "id": "peta6",
-        "nama_peta": "Bing Aerial",
-        "tid": 5,
-        "layer": peta6
-    }];
-
-    var info = L.control({
-        position: 'topright'
-    });
 
     var base_label = '';
     for (let i = 0; i < base.length; i++) {
@@ -700,31 +765,175 @@
     <?php foreach ($peta as $p) {
         $id = $p->id;
         $geo = $this->Buka_peta->frd('mp_geojson', $id, 'Kelompok', null, null);
-        $peta_ne = array();
-        foreach ($geo as $g) {
-
-
-            $map_e = array("id" => $g->id, "nama_peta" => $g->Nama, 'layer' => $g->Variabel);
-            array_push($peta_ne, $map_e); ?>
-
-        <?php }
-        $peta_hasil = json_encode($peta_ne); ?>
-        var ren<?= $p->id ?> = <?= $peta_hasil ?>;
+        $peta_ne = array(); ?>
         var base_ren<?= $p->id ?> = '';
-        for (let i = 0; i < ren<?= $p->id ?>.length; i++) {
-            let obj = ren<?= $p->id ?>[i];
-
-            var o = '<input type="checkbox" onClick="tampil(' +
-                obj.nama_peta + ')"> <label>' + obj.nama_peta + '</label>';
-            base_ren<?= $p->id ?> = base_ren<?= $p->id ?> + o + '<hr>';
-        }
-    <?php } ?>
-
+        <?php foreach ($geo as $g) {
+            $m = $g->id;
+        ?>
+            var o = '<input type="checkbox" style="display:inline-block" onClick="tampil<?= $m ?>(<?= $m ?>)" id="cek<?= $m ?>"> <label><?= $g->Nama ?></label>';
+            var t = '<br><input type="range"  id="trans<?= $m ?>" style="display:none;width: 170px;" oninput="set_transp<?= $m ?>(this.value,<?= $m ?>)" min="0" max="10" value = "5"  name="fav_language" >';
+            var l = '  <input type="checkbox" onClick="legenda<?= $m ?>(<?= $m ?>)" id="cek2<?= $m ?>"  style="display:none"><p id="label<?= $m ?>" style="display:none">Legenda</p>';
+            base_ren<?= $p->id ?> = base_ren<?= $p->id ?> + o + t + l + '<hr>';
 
 
-    function tampil(lay) {
-        alert(lay);
-    }
+
+            function fitur<?= $m ?>(feature, layer) {
+
+
+                layer.bindTooltip(feature.properties['<?= $g->Dasar_Pencarian ?>'], {
+                    permanent: true,
+                    direction: "center",
+                    className: "label_kec"
+                })
+
+                layer.on({
+                    mouseover: highlightFeature<?= $m ?>,
+                    mouseout: resetHighlight<?= $m ?>,
+                })
+            }
+
+            function highlightFeature<?= $m ?>(e) {
+                var layer = e.target;
+
+                layer.setStyle({
+                    color: 'yellow',
+                    fillOpacity: 0.7
+                });
+                var ht = '';
+                <?php
+                $atribut = $this->Buka_peta->frd('mp_atribut', $g->id, 'Kelompok', null, null);
+                if ($atribut != null) {
+                    foreach ($atribut as $at) { ?>
+                        ht = ht + '<b><?= $at->Alias ?></b> : ' + layer.feature.properties['<?= $at->Nama ?>'] + ' <br><br>';
+                <?php }
+                }
+                ?>
+                attr.update('<?= $g->Nama ?>', ht);
+
+            }
+            var peta<?= $m ?>;
+
+            function resetHighlight<?= $m ?>(e) {
+                peta<?= $m ?>.resetStyle(e.target);
+            }
+
+            function base_awal<?= $m ?>(feature) {
+                return {
+                    weight: '1',
+                    <?php if ($g->Simbologi == '0') { ?>
+                        color: '<?= $g->Warna_Isi ?>',
+                    <?php } else { ?>
+                        color: warna<?= $m ?>(feature.properties['<?= $g->Simbologi ?>']),
+                    <?php } ?>
+                };
+            }
+
+            function warna<?= $m ?>(w) {
+                <?php
+                $kelas = $this->Buka_peta->frd('mp_kelas', $m, 'Kelompok', null, null);
+                $w = array();
+                if ($kelas != null) {
+                    foreach ($kelas as $k) {
+                        $wa = array($k->Kelas => $k->Warna);
+                        $w = array_merge($w, $wa);
+                    } ?>
+                    var war = <?= json_encode($w) ?>;
+                    let obj = war[w];
+                    return obj;
+                <?php }
+
+                ?>
+
+            }
+
+            function set_transp<?= $m ?>(s, id_map) {
+                var opacity = s / 10;
+                peta<?= $m ?>.setStyle({
+                    fillOpacity: opacity,
+                    opacity: opacity
+                })
+            }
+            const legend<?= $m ?> = L.control({
+                position: 'bottomleft'
+            });
+            legend<?= $m ?>.onAdd = function(map) {
+                const div = L.DomUtil.create('div', 'info legend');
+                <?php $kelas = $this->Buka_peta->frd('mp_kelas', $m, 'Kelompok', null, null);
+                if ($kelas != null) {
+                    $w = array();
+                    foreach ($kelas as $k) {
+                        $wa = array($k->Kelas);
+                        $w = array_merge($w, $wa);
+                    }
+                }
+                ?>
+                const grades = <?= json_encode($w) ?>;
+                //const grades = [0, 10, 20, 50, 100, 200, 500, 1000];
+                const labels = ['<b>Legenda :</b><br>'];
+                let from, to;
+                for (let i = 0; i < grades.length; i++) {
+                    from = grades[i];
+                    var a = warna<?= $m ?>(from);
+
+                    labels.push('<i style="background:' + a + '"></i> ' + from);
+                }
+
+                div.innerHTML = labels.join('<br>');
+                return div;
+            }
+
+            function legenda<?= $m ?>(id) {
+                var checkBox2<?= $m ?> = document.getElementById("cek2" + id);
+                if (checkBox2<?= $m ?>.checked == true) {
+                    legend<?= $m ?>.addTo(map);
+                } else {
+                    legend<?= $m ?>.remove(map);
+                }
+            }
+
+            function tampil<?= $m ?>(id) {
+                var checkBox<?= $m ?> = document.getElementById("cek" + id);
+                var range<?= $m ?> = document.getElementById("trans" + id);
+                var checkBox2<?= $m ?> = document.getElementById("cek2" + id);
+                var label<?= $m ?> = document.getElementById("label" + id);
+                $.ajax({
+                    url: '<?= base_url('Peta/tampil/') ?>' + id,
+                    success: function(msg) {
+                        var geojsonFeature<?= $m ?> = JSON.parse(msg);
+
+                        if (checkBox<?= $m ?>.checked == true) {
+
+                            var on = {
+                                style: base_awal<?= $m ?>,
+                                onEachFeature: fitur<?= $m ?>
+
+                            }
+
+                            peta<?= $m ?> = L.geoJSON(geojsonFeature<?= $m ?>, on);
+                            peta<?= $m ?>.addTo(map);
+                            range<?= $m ?>.style.display = "inline-block";
+                            checkBox2<?= $m ?>.style.display = "inline-block";
+                            label<?= $m ?>.style.display = "inline-block";
+
+                        } else {
+                            peta<?= $m ?>.remove(map);
+
+                            range<?= $m ?>.style.display = "none";
+                            checkBox2<?= $m ?>.style.display = "none";
+                            label<?= $m ?>.style.display = "none";
+                        }
+
+
+
+                    }
+                });
+            }
+
+    <?php }
+    } ?>
+
+
+
 
 
     info.onAdd = function(map) {
@@ -766,15 +975,12 @@
 
 
         <?php } ?>
-
-
-
+        this._div.setAttribute("onmouseleave", "enab()");
+        this._div.setAttribute("onmouseover", "temporary_disabled()");
         return this._div;
 
 
 
     }
-
-
     info.addTo(map);
 </script>
