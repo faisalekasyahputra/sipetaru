@@ -27,6 +27,7 @@ class Peta extends CI_Controller
             $jns = 'Pola Ruang';
         }
         $datacontent['peta'] = $this->Buka_peta->frd('mp_layer', $peta, 'Kelompok', null, null);
+        $datacontent['kecamatan'] = $this->Buka_peta->peta('kecamatan', NULL, NULL, "MultiPolygon");
         $datacontent['title'] = "Peta";
         $datacontent['jns'] = $jns;
         $data['content'] = $this->load->view('peta/peta', $datacontent, TRUE);

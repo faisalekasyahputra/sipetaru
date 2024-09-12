@@ -52,16 +52,16 @@
 
         overflow-y: scroll;
 
-        scrollbar-color: rebeccapurple green;
+        scrollbar-color: transparent;
 
         font-family: 'Poppins', sans-serif;
 
-        background: white;
-        background: rgba(255, 255, 255, 0.8);
+        background: rgba(255, 255, 255, 0.28);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        -webkit-backdrop-filter: blur(9.2px);
+        backdrop-filter: blur(9.2px);
 
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-
-        border-radius: 5px;
+        border-radius: 10px;
 
         display: block;
 
@@ -107,23 +107,27 @@
 
     }
 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+    }
+
     .atas {
+        position: relative;
+        width: 100%;
 
-        width: 284px;
-
-        height: 30px;
-
-        padding: 6px 8px;
+        margin-bottom: 5px;
+        padding: 5px;
 
         font-family: 'Poppins', sans-serif;
 
-        background: rgba(0, 145, 168, 0.8);
+        background: #0d6efd;
 
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-
-        vertical-align: text-top;
-
-        border-radius: 2px;
+        border-radius: 5px;
     }
 
     .ataspencarian {
@@ -164,27 +168,33 @@
 
     .center {
 
-        margin: 0;
 
-        position: absolute;
+        display: flex;
 
-        justify-content: center;
 
         align-items: center;
 
     }
 
     .drop {
-        padding-top: 10px;
-        margin-left: 250px
+
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin-right: 10px;
+        margin-top: 5px;
+
     }
 
 
-    <?php foreach ($peta as $p) { ?>#frame_peta<?= $p->id ?> {
+    <?php foreach ($peta as $p) {
+        if ($p->id != 1) { ?>#frame_peta<?= $p->id ?> {
         display: none;
     }
 
-    <?php } ?>#from_tematik {
+    <?php }
+    } ?>#from_tematik {
         display: none;
     }
 
@@ -526,16 +536,40 @@
         var d = document.getElementById('panah' + i);
         d.innerHTML = '<a href="#" onclick="show_admin(' + i + ')" ><img src="<?= base_url('assets/img/arrow_down.png') ?>"></a>'
     }
+
+    function onEachkec(feature, layer) {
+        layer.bindTooltip(feature.properties['KECAMATAN'], {
+            permanent: true,
+            direction: "center",
+            className: "label_kec"
+        });
+    }
+
+    function gaya_kecamatan(feature) {
+        return {
+            color: 'white',
+            weight: 0.2,
+            fillOpacity: 0.05,
+            weight: 0.5
+        };
+    }
     //------------------------------------------------------------------------------------------------
+
+    var kecamatan = L.geoJSON([<?= $kecamatan ?>], {
+        style: gaya_kecamatan,
+        onEachFeature: onEachkec
+    });
     var map = L.map('map', {
         center: [-6.753482, 111.0374407],
-        zoom: 13,
+        zoom: 12,
         maxZoom: 25,
-        minZoom: 12,
+        minZoom: 9,
+        layers: [peta3, kecamatan],
         attributionControl: false,
         zoomControl: false,
     });
-    map.addLayer(peta3);
+
+
 
     map.on('dialog:opened', function(e) {
         console.log("dialog opened event fired.");
@@ -666,27 +700,33 @@
     <?php foreach ($peta as $p) {
         $id = $p->id;
         $geo = $this->Buka_peta->frd('mp_geojson', $id, 'Kelompok', null, null);
+        $peta_ne = array();
         foreach ($geo as $g) {
-    ?>
-            var x = {
-                "id": 'admin14',
-                "nama_peta": "Pola Ruang",
-                "tid": 14,
-            };
-        <?php } ?>
 
+
+            $map_e = array("id" => $g->id, "nama_peta" => $g->Nama, 'layer' => $g->Variabel);
+            array_push($peta_ne, $map_e); ?>
+
+        <?php }
+        $peta_hasil = json_encode($peta_ne); ?>
+        var ren<?= $p->id ?> = <?= $peta_hasil ?>;
+        var base_ren<?= $p->id ?> = '';
+        for (let i = 0; i < ren<?= $p->id ?>.length; i++) {
+            let obj = ren<?= $p->id ?>[i];
+
+            var o = '<input type="checkbox" onClick="tampil(' +
+                obj.nama_peta + ')"> <label>' + obj.nama_peta + '</label>';
+            base_ren<?= $p->id ?> = base_ren<?= $p->id ?> + o + '<hr>';
+        }
     <?php } ?>
-    var ren1 = [x];
-    var base_ren1 = '';
-    for (let i = 0; i < ren1.length; i++) {
-        let obj = ren1[i];
 
-        base_ren1 = base_ren1 + '<input type="checkbox"  name="cek" checked="true" onClick="find_ren1(' +
-            obj.tid + ')" id="ren1' + obj.tid + '" ><label for="html">' +
-            obj.nama_peta + '</label><br><input type="range" id="rt_ren1' +
-            obj.tid + '" style="display:inline-block" oninput="set_transp_ren1(this.value,' +
-            obj.tid + ')" min="0" max="10" value = "5"  name="fav_language" ><hr>';
+
+
+    function tampil(lay) {
+        alert(lay);
     }
+
+
     info.onAdd = function(map) {
 
         this._div = L.DomUtil.create('div', 'info');
@@ -721,7 +761,7 @@
 
             frame_peta<?= $m ?> = L.DomUtil.create('div', 'box_basemap');
             frame_peta<?= $m ?>.id = "frame_peta<?= $m ?>"
-            frame_peta<?= $m ?>.innerHTML = base_ren1;
+            frame_peta<?= $m ?>.innerHTML = base_ren<?= $m ?>;
             this._div.append(frame_peta<?= $m ?>);
 
 
