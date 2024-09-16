@@ -13,7 +13,7 @@ class Configur extends CI_Controller
     }
     public function index()
     {
-        $table = 'kecamatan';
+        $table = 'kontur';
         $file = $table . '.geojson';
         $filename = base_url() . 'assets/geojson/Peta_Dasar/Administrasi/' . $file;
         $data = file_get_contents($filename); //data read from json file
@@ -62,9 +62,59 @@ class Configur extends CI_Controller
 
     public function buat_json()
     {
-        $myObj = new stdClass();
-        $myObj->type = "Feature";
-        $myJSON = json_encode($myObj);
-        echo $myJSON;
+        $string = "layer:pola_ruang";
+
+        // Memecah string menjadi array
+        $array = explode(',', $string);
+        $obj = new stdClass();
+
+        foreach ($array as $item) {
+            list($key, $value) = explode(':', $item);
+            $obj->$key = $value;
+        }
+
+        // Output: peta0
+        echo $obj->layer;
+    }
+
+    public function coba_json()
+    {
+
+
+
+        $sp = $this->Buka_peta->frd('saluran_pembuang', '1', 'id', null, null);
+        $desa = $sp[0]->Desa;
+        $kecamatan = $sp[0]->Kecamatan;
+        $kemantren = $sp[0]->Kemantren;
+        $uptd = $sp[0]->UPTD;
+        $des = $sp[0]->geojson;
+        $trim = trim($des);
+        $jml = strlen($trim);
+        $des = substr(trim($trim), 0, $jml - 1);
+        $json = json_decode($des, true);
+        $hasil1 = array("desa_peta" => $json);
+        echo json_encode($hasil1);
+
+        echo '<br>-----------------------------------------------------------------------------------<br>';
+
+        $kec = $this->Buka_peta->frd('kecamatan', '1', 'id', null, null);
+        $peta_ne = array();
+        foreach ($kec as $h) {
+            $map_nya = array();
+            foreach ($h as $key => $val) {
+                if ($key != 'Koordinat') {
+                    $map = array($key => $val);
+                    $map_nya = array_merge($map_nya, $map);
+                }
+            }
+
+            $geo = array('type' => 'MultiPolygon', "coordinates" => $h->Koordinat);
+            $peta = array('type' => 'Feature', "properties" => $map_nya, "geometry" => $geo);
+            array_push($peta_ne, $peta);
+        }
+
+
+        $hasil2 = array("desa_peta" => $peta);
+        echo json_encode($hasil2);
     }
 }
