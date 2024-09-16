@@ -58,8 +58,8 @@
 
         background: rgba(255, 255, 255, 0.28);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        -webkit-backdrop-filter: blur(9.2px);
-        backdrop-filter: blur(9.2px);
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
 
         border-radius: 10px;
 
@@ -102,8 +102,8 @@
         z-index: 2;
         background: rgba(255, 255, 255, 0.28);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        -webkit-backdrop-filter: blur(9.2px);
-        backdrop-filter: blur(9.2px);
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
 
     }
 
@@ -130,294 +130,293 @@
         background: #0d6dfd77;
 
         border-radius: 5px;
-        -webkit-backdrop-filter: blur(9.2px);
-        backdrop-filter: blur(9.2px);
-    }
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
 
-    .ataspencarian {
+        .ataspencarian {
 
 
 
-        position: relative;
+            position: relative;
 
-        display: flex;
+            display: flex;
 
-        vertical-align: middle;
+            vertical-align: middle;
 
-        text-align: center;
+            text-align: center;
 
-        background: rgba(0, 145, 168, 0.8);
+            background: rgba(0, 145, 168, 0.8);
 
-        height: 30px;
+            height: 30px;
 
-        padding: 6px 8px;
+            padding: 6px 8px;
 
 
 
-        align-items: baseline;
+            align-items: baseline;
 
-        justify-content: center;
+            justify-content: center;
 
-    }
+        }
 
-    .box_basemap {
+        .box_basemap {
 
 
 
-        margin: 10px 5px 5px 10px;
+            margin: 10px 5px 5px 10px;
 
-        border-radius: 5px;
+            border-radius: 5px;
 
-    }
+        }
 
-    .center {
+        .center {
 
 
-        display: flex;
+            display: flex;
 
 
-        align-items: center;
+            align-items: center;
 
-    }
+        }
 
-    .drop {
+        .drop {
 
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        margin-right: 10px;
-        margin-top: 5px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin-right: 10px;
+            margin-top: 5px;
 
-    }
+        }
 
-    <?php foreach ($peta as $p) {
-        $geo = $this->Buka_peta->frd('mp_geojson', $p->id, 'Kelompok', null, null);
-        foreach ($geo as $g) {
-    ?>.legend {
-        padding: 10px;
-        translate: 0 5%;
-        position: relative;
-        width: 300px;
+        <?php foreach ($peta as $p) {
+            $geo = $this->Buka_peta->frd('mp_geojson', $p->id, 'Kelompok', null, null);
+            foreach ($geo as $g) {
+        ?>.legend {
+            padding: 10px;
+            translate: 0 5%;
+            position: relative;
+            width: 300px;
 
-        max-width: 300px;
-        line-height: 25px;
-        height: auto;
-        overflow-y: hidden;
-        z-index: 400;
+            max-width: 300px;
+            line-height: 25px;
+            height: auto;
+            overflow-y: hidden;
+            z-index: 400;
 
-    }
+        }
 
-    .legend i {
-        width: 20px;
-        height: 20px;
-        float: left;
-        margin-right: 8px;
-        opacity: 0.7;
-        font-family: 'Poppins', sans-serif;
-        font-size: 18px;
+        .legend i {
+            width: 20px;
+            height: 20px;
+            float: left;
+            margin-right: 8px;
+            opacity: 0.7;
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
 
-    }
+        }
 
-    <?php }
-    } ?><?php foreach ($peta as $p) {
-            if ($p->id != 1) { ?>#frame_peta<?= $p->id ?> {
-        display: none;
-    }
+        <?php }
+        } ?><?php foreach ($peta as $p) {
+                if ($p->id != 1) { ?>#frame_peta<?= $p->id ?> {
+            display: none;
+        }
 
-    <?php }
-        } ?>#from_tematik {
-        display: none;
-    }
+        <?php }
+            } ?>#from_tematik {
+            display: none;
+        }
 
-    #from_rencana {
-        display: none;
-    }
+        #from_rencana {
+            display: none;
+        }
 
-    #from_rencana2 {
-        display: none;
-    }
+        #from_rencana2 {
+            display: none;
+        }
 
-    #from_renta {
-        display: none;
-    }
+        #from_renta {
+            display: none;
+        }
 
 
 
-    .attrhead {
-        width: 100%;
+        .attrhead {
+            width: 100%;
 
 
 
-        position: relative;
+            position: relative;
 
-        display: inline-block;
+            display: inline-block;
 
-        vertical-align: middle;
+            vertical-align: middle;
 
-        text-align: center;
+            text-align: center;
 
 
 
 
 
-    }
+        }
 
-    .label_kec {
-        width: auto;
-        height: auto;
-        font-size: 12px;
+        .label_kec {
+            width: auto;
+            height: auto;
+            font-size: 12px;
 
-        border-color: none;
+            border-color: none;
 
-        border-width: 0;
+            border-width: 0;
 
-        background: rgba(255, 255, 255, 0.0);
+            background: rgba(255, 255, 255, 0.0);
 
-        font-weight: bold;
+            font-weight: bold;
 
-        text-shadow: -1px 0 red, 0 1px black, 1px 0 red, 0 -1px red;
+            text-shadow: -1px 0 red, 0 1px black, 1px 0 red, 0 -1px red;
 
-        color: white;
-    }
+            color: white;
+        }
 
 
 
-    .leaflet-control-dialog {
+        .leaflet-control-dialog {
 
-        position: absolute;
+            position: absolute;
 
-        background: white;
-        background: rgba(255, 255, 255, 1);
+            background: white;
+            background: rgba(255, 255, 255, 1);
 
-        padding: 0px;
+            padding: 0px;
 
-        text-align: center;
+            text-align: center;
 
-        border-radius: 4px;
+            border-radius: 4px;
 
-        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
 
-    }
+        }
 
-    .panelatas {
+        .panelatas {
 
-        /* width:384px; */
+            /* width:384px; */
 
-        /* height: 10px; */
+            /* height: 10px; */
 
-        padding: 3px 0px;
+            padding: 3px 0px;
 
-        font-family: 'Poppins', sans-serif;
+            font-family: 'Poppins', sans-serif;
 
-        background: rgba(0, 145, 168, 0.8);
+            background: rgba(0, 145, 168, 0.8);
 
-        box-shadow: 0 0 15px rgb(0 0 0 / 20%);
+            box-shadow: 0 0 15px rgb(0 0 0 / 20%);
 
-        vertical-align: text-top;
+            vertical-align: text-top;
 
-        border-radius: 2px;
+            border-radius: 2px;
 
-    }
+        }
 
-    .panelcenter {
+        .panelcenter {
 
 
 
-        padding: 7px;
+            padding: 7px;
 
-        /* position: relative; */
+            /* position: relative; */
 
-        display: flex;
+            display: flex;
 
-        vertical-align: middle;
+            vertical-align: middle;
 
 
 
-        align-items: center;
+            align-items: center;
 
-        justify-content: center;
+            justify-content: center;
 
-    }
+        }
 
-    .leaflet-control-dialog-close {
+        .leaflet-control-dialog-close {
 
-        position: absolute;
+            position: absolute;
 
-        width: 20px;
+            width: 20px;
 
-        height: 20px;
+            height: 20px;
 
-        top: 0px;
+            top: 0px;
 
-        right: 0px;
+            right: 0px;
 
-        padding: 2px;
+            padding: 2px;
 
-        font-size: 16px;
+            font-size: 16px;
 
-        line-height: 16px;
-    }
+            line-height: 16px;
+        }
 
-    .isi {
-        padding: 20px 15px;
-    }
+        .isi {
+            padding: 20px 15px;
+        }
 
-    .sticky-header1 {
+        .sticky-header1 {
 
-        background-color: #0091a8;
+            background-color: #0091a8;
 
-        color: #000000;
+            color: #000000;
 
-        display: flex;
+            display: flex;
 
 
 
 
 
-        align-items: center;
+            align-items: center;
 
 
 
-    }
+        }
 
-    .content-scroll1 {
+        .content-scroll1 {
 
-        margin-top: 0px;
+            margin-top: 0px;
 
-        height: 100%;
+            height: 100%;
 
 
 
-    }
+        }
 
-    .banner {
+        .banner {
 
 
 
-        display: inline;
+            display: inline;
 
-        margin-top: 10px;
+            margin-top: 10px;
 
-        margin-left: 15px;
+            margin-left: 15px;
 
-        margin-bottom: 10px;
+            margin-bottom: 10px;
 
 
 
 
 
-    }
+        }
 
-    .banner1 {
+        .banner1 {
 
 
 
-        display: inline;
+            display: inline;
 
-        margin-left: 10px;
+            margin-left: 10px;
 
-        font-weight: bold;
+            font-weight: bold;
 
 
 
@@ -425,75 +424,75 @@
 
 
 
-    }
+        }
 
-    .banner2 {
+        .banner2 {
 
-        color: black;
+            color: black;
 
-        margin-top: 31px;
+            margin-top: 31px;
 
-        display: inline;
+            display: inline;
 
-        margin-left: 15px;
+            margin-left: 15px;
 
-        width: 1100px;
+            width: 1100px;
 
-        position: relative;
+            position: relative;
 
-        text-align: right;
+            text-align: right;
 
-    }
+        }
 
-    .dinas1 {
+        .dinas1 {
 
-        font-size: 28px;
+            font-size: 28px;
 
-        color: white;
+            color: white;
 
 
 
-    }
+        }
 
-    .dinas2 {
+        .dinas2 {
 
 
 
-        font-size: 22px;
+            font-size: 22px;
 
-        color: white;
+            color: white;
 
-    }
+        }
 
-    .layertext {
-        font-size: small;
-    }
+        .layertext {
+            font-size: small;
+        }
 
-    .pencarian {
+        .pencarian {
 
-        width: 250px;
+            width: 250px;
 
-        max-width: 250px;
+            max-width: 250px;
 
-        min-height: 90px;
+            min-height: 90px;
 
-        z-index: 100;
+            z-index: 100;
 
-        font-family: 'Poppins', sans-serif;
+            font-family: 'Poppins', sans-serif;
 
-        background: white;
-        background: rgba(255, 255, 255, 1);
+            background: white;
+            background: rgba(255, 255, 255, 1);
 
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 
 
 
-        display: block;
+            display: block;
 
-        position: relative;
+            position: relative;
 
-        z-index: 2;
-    }
+            z-index: 2;
+        }
 </style>
 <script>
     var key = 'pk.87f2d9fcb4fdd8da1d647b46a997c727';

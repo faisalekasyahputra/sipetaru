@@ -20,16 +20,16 @@
                     </a>
                     <ul class="dropdown-menu mt-4 p-1" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/bgn_nonpem') ?>">Visi & Misi</a>
+                            <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/visi') ?>">Visi & Misi</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/fung_nonpem') ?>">Tugas Pokok dan Fungsi </a>
+                            <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/tugas') ?>">Tugas Pokok dan Fungsi </a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/fung_nonpem') ?>">Struktur Organisasi </a>
+                            <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/struktur') ?>">Struktur Organisasi </a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/fung_nonpem') ?>">Sumber Daya Manusia </a>
+                            <a class="dropdown-item nav-link" href="<?= base_url('index.php/Welcome/sdm') ?>">Sumber Daya Manusia </a>
                         </li>
 
 

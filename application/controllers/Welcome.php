@@ -11,13 +11,13 @@ class Welcome extends CI_Controller
 	}
 	public function index()
 	{
-		$datacontent['title'] = "PJU Kabupaten Kotawaringin Barat";
+		$datacontent['title'] = "Sipetarung || PATI";
 		$data['content'] = $this->load->view('main', $datacontent, TRUE);
 		$this->load->view('index', $data);
 	}
 	public function peta()
 	{
-		$datacontent['title'] = "Peta";
+		$datacontent['title'] = "Peta || SIPETARUNG PATI";
 		$datacontent['pju'] = $this->Buka_peta->titik_pju(NULL, NULL, 'tb_pju');
 		$datacontent['meteran'] = $this->Buka_peta->titik_meteran(NULL, NULL, 'tb_meteran');
 		$data['content'] = $this->load->view('peta/peta', $datacontent, TRUE);
@@ -36,6 +36,30 @@ class Welcome extends CI_Controller
 		$data['content'] = $this->load->view('pju', $datacontent, TRUE);
 		$data['pju'] = $this->Buka_peta->frd('tb_pju', NULL, NULL);
 		$this->load->view('pju', $data);
+	}
+	public function visi()
+	{
+		$datacontent['title'] = "VIVI & MISI";
+		$data['content'] = $this->load->view('profil/visi', $datacontent, TRUE);
+		$this->load->view('index', $data);
+	}
+	public function tugas()
+	{
+		$datacontent['title'] = "VISI & MISI";
+		$data['content'] = $this->load->view('profil/tugas', $datacontent, TRUE);
+		$this->load->view('index', $data);
+	}
+	public function struktur()
+	{
+		$datacontent['title'] = "Struktur Organisasi";
+		$data['content'] = $this->load->view('profil/struktur', $datacontent, TRUE);
+		$this->load->view('index', $data);
+	}
+	public function sdm()
+	{
+		$datacontent['title'] = "Sumber Daya Manusia";
+		$data['content'] = $this->load->view('profil/sdm', $datacontent, TRUE);
+		$this->load->view('index', $data);
 	}
 	public function detail($id)
 	{

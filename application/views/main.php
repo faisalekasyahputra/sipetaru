@@ -1,4 +1,4 @@
-<section id="section-1" class="hero-section bg-body-tertiary" style="background-image: url('<?= base_url('assets/img/bg.jpeg') ?>'); background-size: cover;">
+<section id="section-1" class="hero-section bg-body-tertiary">
     <!-- <div class="pindang position-absolute bottom-0" style="z-index: 5;">
         <img width="300" src="<?= base_url('assets/img/pindang.png') ?>" alt="">
     </div> -->
@@ -6,33 +6,33 @@
         <div class="container-fluid  pt-5 position-relative" style=" margin-top:50px;">
             <div class="row d-flex align-items-middle m-auto pt-5 ">
                 <div class="col d-flex" data-aos="fade-up" data-aos-offset="0" data-aos-delay="150" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
-                    <div class="col-3 ">
+                    <div class="col-3 pb-5">
 
                         <dotlottie-player src="https://lottie.host/aa8aabbf-895c-41df-b8ee-13f720dfcdf2/actgKuY5Fe.json" background="transparent" speed="2" style="width: 150px;" loop autoplay></dotlottie-player>
                     </div>
 
                     <div class="col py-3">
                         <p class="lead fs-small badge text-bg-primary mb-0">SIPETARUNG KABUPATEN PATI</p>
-                        <p class="display-5 text-dark text-capitalize dela-gothic-one-regular">Sistem informasi <br>penataan ruang kabupaten pati</p>
-                        <p class="h2 text-dark">Dinas DPUPR</p>
-                        <small class="lead fs-medium "> Kabupaten Pati</small>
+                        <p class="h1 text-dark text-capitalize dela-gothic-one-regular">Sistem informasi <br>penataan ruang kabupaten pati</p>
+                        <p class="h4 fw-bolder text-dark m-0">Dinas DPUPR</p>
+                        <small class="lead fs-medium m-0"> Kabupaten Pati</small>
                     </div>
                 </div>
                 <div class="col d-flex justify-content-center " data-aos="fade-up" data-aos-offset="0" data-aos-delay="150" data-aos-duration="900" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
-                    <img class="img-thumbnail border border-0 vibrate-1 w-50 bg-transparent " src="<?= base_url('assets/img/land.png') ?>" alt="">
+                    <img class="img-thumbnail border border-0 vibrate-1 h-50 bg-transparent " src="<?= base_url('assets/img/land.png') ?>" alt="">
                 </div>
             </div>
 
 
 
-            <div class="row justify-content-center g-3 p-3 position-absolute bottom-0 ">
+            <div class="row justify-content-center g-3 p-3 position-absolute bottom-0 mt-4">
                 <div class="col-md-4 ">
                     <a href="">
-                        <div class="card mb-3 glass rounded-4 position-relative h-100" data-aos="fade-up" data-aos-offset="0" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
+                        <div class="card mb-3 glass rounded-4 position-relative" data-aos="fade-up" data-aos-offset="0" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
 
                             <div class="card-body d-flex flex-row">
                                 <div class="col glass me-3 rounded-2 d-flex justify-content-center">
-                                    <img class="img-thumbnail border border-0  w-75 bg-transparent " src="<?= base_url('assets/img/3d-view-map.png') ?>" alt="">
+                                    <img class="img-thumbnail border border-0 w-auto bg-transparent " src="<?= base_url('assets/img/3d-view-map.png') ?>" alt="">
 
                                 </div>
                                 <div class="col ">
@@ -57,11 +57,11 @@
                 </div>
                 <div class="col-md-4 ">
                     <a href="">
-                        <div class="card mb-3 glass rounded-4 position-relative h-100" data-aos="fade-up" data-aos-offset="0" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
+                        <div class="card mb-3 glass rounded-4 position-relative " data-aos="fade-up" data-aos-offset="0" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
 
                             <div class="card-body d-flex flex-row">
                                 <div class="col glass me-3 rounded-2 d-flex justify-content-center">
-                                    <img class="img-thumbnail border border-0  w-100 bg-transparent " src="<?= base_url('assets/img/peta.png') ?>" alt="">
+                                    <img class="img-thumbnail border border-0   bg-transparent " src="<?= base_url('assets/img/peta.png') ?>" alt="">
 
                                 </div>
                                 <div class="col">
@@ -80,11 +80,11 @@
                 </div>
                 <div class="col-md-4 ">
                     <a href="">
-                        <div class="card mb-3 glass rounded-4 position-relative h-100 " data-aos="fade-up" data-aos-offset="0" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
+                        <div class="card mb-3 glass rounded-4 position-relative" data-aos="fade-up" data-aos-offset="0" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
 
                             <div class="card-body d-flex flex-row">
                                 <div class="col glass me-3 rounded-2 d-flex justify-content-center">
-                                    <img class="img-thumbnail border border-0  w-75 bg-transparent " src="<?= base_url('assets/img/34.png') ?>" alt="">
+                                    <img class="img-thumbnail border border-0  bg-transparent " src="<?= base_url('assets/img/34.png') ?>" alt="">
                                 </div>
                                 <div class="col">
                                     <h4 class="card-title dela-gothic-one-regular text-dark text-start ">PELAYANAN</h4>
