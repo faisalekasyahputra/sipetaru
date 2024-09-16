@@ -13,13 +13,36 @@ class Configur extends CI_Controller
     }
     public function index()
     {
-        $table = 'kontur';
+        $table = 'jaringan_transportasi';
         $file = $table . '.geojson';
         $filename = base_url() . 'assets/geojson/Peta_Dasar/Administrasi/' . $file;
         $data = file_get_contents($filename); //data read from json file
         $json1 = json_decode($data, TRUE);
 
         $this->konversi($json1, $table);
+    }
+    public function index1()
+    {
+        $table = 'transportasi_pt';
+        $file = $table . '.geojson';
+        $filename = base_url() . 'assets/geojson/Peta_Dasar/Administrasi/' . $file;
+        $data = file_get_contents($filename); //data read from json file
+        $json1 = json_decode($data, TRUE);
+        foreach ($json1['features'] as $json) {
+            $geo = $json['geometry']['coordinates'];
+            foreach ($geo as $ge) {
+                foreach ($ge as $g) {
+                    foreach ($g as $g1) {
+                        $hasil1 = [$g1[0]];
+                        $hasil2 = [$g1[1]];
+
+
+                        $has = array($hasil1[0], $hasil2[0], 0.0);
+                    }
+                }
+            }
+        }
+        //$this->konversi($json1, $table);
     }
     public function konversi($json1, $table)
     {
@@ -28,7 +51,9 @@ class Configur extends CI_Controller
         $d_sql = "";
         $arr = array();
         foreach ($f as $key => $val) {
-            $d_sql = $d_sql . "," . $key . " VARCHAR(255) NULL";
+            if ($key != 'Id') {
+                $d_sql = $d_sql . "," . $key . " VARCHAR(255) NULL";
+            }
             $arr1 = array($key);
             $arr = array_merge($arr, $arr1);
         }

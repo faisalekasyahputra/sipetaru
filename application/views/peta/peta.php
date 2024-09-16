@@ -752,7 +752,16 @@
 
     attr.addTo(map);
 
+    function popUp(f, l) {
+        var layer = l;
+        var out = [];
+        var data = [];
+        if (f.properties) {
+            l.on('click', function(e) {
 
+            })
+        }
+    }
 
     var base_label = '';
     for (let i = 0; i < base.length; i++) {
@@ -768,6 +777,8 @@
         }
 
     }
+
+
     <?php foreach ($peta as $p) {
         $id = $p->id;
         $geo = $this->Buka_peta->frd('mp_geojson', $id, 'Kelompok', null, null);
@@ -776,7 +787,7 @@
         <?php foreach ($geo as $g) {
             $m = $g->id;
         ?>
-            var o = '<input type="checkbox" style="display:inline-block" onClick="tampil<?= $m ?>(<?= $m ?>)" id="cek<?= $m ?>"> <label><?= $g->Nama ?></label>';
+            var o = '<input type="checkbox" style="display:inline-block" onClick="tampil<?= $m ?>(<?= $m ?>)" id="cek<?= $m ?>"> <label><?= $g->Nama . ' ' . $g->id ?> </label>';
             var t = '<br><input type="range"  id="trans<?= $m ?>" style="display:none;width: 170px;" oninput="set_transp<?= $m ?>(this.value,<?= $m ?>)" min="0" max="10" value = "5"  name="fav_language" >';
             var l = '  <input type="checkbox" onClick="legenda<?= $m ?>(<?= $m ?>)" id="cek2<?= $m ?>"  style="display:none"><p id="label<?= $m ?>" style="display:none">Legenda</p>';
             base_ren<?= $p->id ?> = base_ren<?= $p->id ?> + o + t + l + '<hr>';
@@ -785,13 +796,13 @@
 
             function fitur<?= $m ?>(feature, layer) {
 
-
-                layer.bindTooltip(feature.properties['<?= $g->Dasar_Pencarian ?>'], {
-                    permanent: true,
-                    direction: "center",
-                    className: "label_kec"
-                })
-
+                <?php if ($g->label != '0') { ?>
+                    layer.bindTooltip(feature.properties['<?= $g->Dasar_Pencarian ?>'], {
+                        permanent: true,
+                        direction: "center",
+                        className: "label_kec"
+                    })
+                <?php } ?>
                 layer.on({
                     mouseover: highlightFeature<?= $m ?>,
                     mouseout: resetHighlight<?= $m ?>,
@@ -802,8 +813,9 @@
                 var layer = e.target;
 
                 layer.setStyle({
-                    color: 'yellow',
-                    fillOpacity: 0.7
+
+                    fillOpacity: 1,
+                    weight: 1
                 });
                 var ht = '';
                 <?php
@@ -825,13 +837,30 @@
 
             function base_awal<?= $m ?>(feature) {
                 return {
-                    weight: '1',
+                    weight: '<?= $g->Ketajaman_Garis ?>',
+                    fillOpacity: '<?= $g->Ketajaman_Isi ?>',
                     <?php if ($g->Simbologi == '0') { ?>
                         color: '<?= $g->Warna_Isi ?>',
                     <?php } else { ?>
                         color: warna<?= $m ?>(feature.properties['<?= $g->Simbologi ?>']),
                     <?php } ?>
                 };
+            }
+
+            function titikku<?= $m ?>(feature, latlng) {
+                var b = feature.properties['<?= $g->Simbologi ?>'];
+                var c = '<?= base_url('assets/icons/') ?>';
+                var v = warna<?= $m ?>(b);
+                var Url_nya = c + v;
+                var Icon = L.icon({
+                    iconUrl: Url_nya,
+                    iconSize: [14, 14],
+                });
+                var marker = L.marker(latlng, {
+                    icon: Icon
+                });
+
+                return marker
             }
 
             function warna<?= $m ?>(w) {
@@ -905,16 +934,19 @@
                 $.ajax({
                     url: '<?= base_url('Peta/tampil/') ?>' + id,
                     success: function(msg) {
-                        var geojsonFeature<?= $m ?> = JSON.parse(msg);
-
                         if (checkBox<?= $m ?>.checked == true) {
-
-                            var on = {
-                                style: base_awal<?= $m ?>,
-                                onEachFeature: fitur<?= $m ?>
-
-                            }
-
+                            var geojsonFeature<?= $m ?> = JSON.parse(msg);
+                            <?php if ($g->Tipe != 'Point') { ?>
+                                var on = {
+                                    style: base_awal<?= $m ?>,
+                                    onEachFeature: fitur<?= $m ?>
+                                }
+                            <?php } else { ?>
+                                var on = {
+                                    pointToLayer: titikku<?= $m ?>,
+                                    onEachFeature: fitur<?= $m ?>
+                                }
+                            <?php } ?>
                             peta<?= $m ?> = L.geoJSON(geojsonFeature<?= $m ?>, on);
                             peta<?= $m ?>.addTo(map);
                             range<?= $m ?>.style.display = "inline-block";
@@ -923,10 +955,11 @@
 
                         } else {
                             peta<?= $m ?>.remove(map);
-
+                            legend<?= $m ?>.remove(map);
                             range<?= $m ?>.style.display = "none";
                             checkBox2<?= $m ?>.style.display = "none";
                             label<?= $m ?>.style.display = "none";
+
                         }
 
 

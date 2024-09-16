@@ -17,6 +17,22 @@ class Buka_peta extends CI_Model
             return NULL;
         }
     }
+
+    public function frd_range($tablename, $args, $field, $field_order, $order)
+    {
+        if ($args != NULL) {
+            $this->db->where('id <=', '1');
+        }
+        if ($order != null) {
+            $this->db->order_by($field_order, $order);
+        }
+        $query = $this->db->get($tablename);
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return NULL;
+        }
+    }
     public function insert_data($tablename, $arg1)
     {
         $this->db->insert($tablename, $arg1);
