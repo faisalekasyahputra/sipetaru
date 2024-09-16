@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 <div class="col d-flex justify-content-center " data-aos="fade-up" data-aos-offset="0" data-aos-delay="150" data-aos-duration="900" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true">
-                    <img class="img-thumbnail border border-0 vibrate-1 w-75 bg-transparent " src="<?= base_url('assets/img/land.png') ?>" alt="">
+                    <img class="img-thumbnail border border-0 vibrate-1 w-50 bg-transparent " src="<?= base_url('assets/img/land.png') ?>" alt="">
                 </div>
             </div>
 
