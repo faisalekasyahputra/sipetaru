@@ -125,9 +125,11 @@
 
         font-family: 'Poppins', sans-serif;
 
-        background: #0d6efd;
+        background: #0d6dfd77;
 
         border-radius: 5px;
+        -webkit-backdrop-filter: blur(9.2px);
+        backdrop-filter: blur(9.2px);
     }
 
     .ataspencarian {
@@ -431,6 +433,10 @@
 
     }
 
+    .layertext {
+        font-size: small;
+    }
+
     .pencarian {
 
         width: 250px;
@@ -698,7 +704,7 @@
         //header basemaps
         head = L.DomUtil.create('div', 'atas');
         this._atas = L.DomUtil.create('div', 'center');
-        this._atas.innerHTML = '<h6><b>Base Maps</b></h6>';
+        this._atas.innerHTML = '<h6 class="layertext"><b>Base Maps</b></h6>';
         head.append(this._atas);
         panah = L.DomUtil.create('div', 'drop');
         panah.id = 'dr_atas';
@@ -715,7 +721,7 @@
             $m = $p->id;
         ?>
             peta<?= $m ?> = L.DomUtil.create('div', 'atas');
-            peta<?= $m ?>.innerHTML = '<div class="center"><h6><b><?= $p->Nama_Layer ?></b></h6></div>';
+            peta<?= $m ?>.innerHTML = '<div class="center"><h6 class="layertext"><b><?= $p->Nama_Layer ?></b></h6></div>';
             panah_peta<?= $m ?> = L.DomUtil.create('div', 'drop');
             panah_peta<?= $m ?>.innerHTML = '<a href="#" onclick="show_admin(<?= $m ?>)" ><img src="<?= base_url('assets/img/arrow_down.png') ?>"></a>';
             panah_peta<?= $m ?>.id = 'panah<?= $m ?>';
